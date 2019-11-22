@@ -1,0 +1,11 @@
+docker info --format '{{.LoggingDriver}}'
+
+docker run -it --log-driver none alpine ash
+
+docker run -it --log-opt mode=non-blocking --log-opt max-buffer-size=4m alpine ping 127.0.0.1
+
+docker run -dit --label production_status=testing -e os=ubuntu alpine sh
+
+docker swarm init --default-addr-pool 10.20.0.0/16
+
+docker swarm init --default-addr-pool 10.20.0.0/16 --default-addr-pool 10.30.0.0/16 --default-addr-pool-mask-length 26

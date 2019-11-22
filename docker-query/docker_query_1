@@ -1,0 +1,54 @@
+docker run -d \
+  --name devtest \
+  --mount source=myvol2,target=/app \
+  nginx:latest
+
+# Create a volume using volume driver #
+
+  docker volume create --driver vieux/sshfs \
+  -o sshcmd=test@node2:/home/test \
+  -o password=testpassword \
+  sshvolume
+
+# Backup and migrate data #
+# Use this option under running container image with --volume-from
+# 1
+ docker run -v /dbdata --name dbstore ubuntu /bin/bash
+
+# 2
+ docker run --rm --volumes-from \ 
+ dbstore -v (pwd):/backup \ 
+ ubuntu tar cvf /backup/backup.tar /dbdata
+
+#- Explaining:
+#	. docker run --rm ==> Run the image, remove its container when it's done
+#. --volume-from   ==> Enable migration option
+#	. --volume-from dbstore -v (pwd):/backup  #> migrate from dbstore container into volume /pwd/backup
+#   . ubuntu 		  ==> start image ubuntu
+#	. tar 			  ==> param1 = tar
+#	. cvf 			  ==> param2 = cvf 
+#	. /backup/backup.tar /dbdata #> tar dest src 
+
+
+UNTAR THE BACKUP:
+ docker run -v /dbdata --name dbstore2 ubuntu /bin/bash
+
+ docker run --rm --volumes-from dbstore2 -v (pwd):/backup ubuntu bash -c "cd /dbdata && tar xvf /backup/backup.tar --strip 1"
+
+# Remove volume
+
+# Remove all volume 
+
+# Remove all anonymous volume 
+
+# Secure docker network by default 
+ mkdir -pv ~/.docker
+ 
+ cp -v {ca,cert,key}.pem ~/.docker
+
+ export DOCKER_HOST=tcp://HOST:2376 DOCKER_TLS_VERIFY=1
+
+# Stop and remove all docker containers.
+
+docker stop (docker ps -a -q)
+docker rm (docker ps -a -q)

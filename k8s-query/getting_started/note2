@@ -1,0 +1,16 @@
+[K8s][Cert]
+Understanding how the cert is categorised helps to choose and understand more the practical exercises.
+
+Insight:
+Goal of k8s: desired state management
+Big technical components could be generally grouped into: Cluster/ Node, Pods/Service/Jobs
+
+3 types of interaction with required for this k8s job:
+Imperative: probably just ssh to VPS, and interact thru cmd.
+Declarative: yaml. For big very tiny specific configuration
+Via web dashboard: probably for inspecting and troubleshooting
+
+Interesting thing to know:
+Plugged in type architecture which means k8s is growing everyday. “There is a full time job just to see what’s new on K8s  everyday” According to Joe Beda lol.
+
+

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment
+  labels:
+    name: my-http
+spec: 
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-http
+  template:
+    metadata:
+      labels:
+        app: my-http
+    spec:
+      containers:
+      - name: my-http
+        image: katacoda/docker-http-server
+        ports:
+        - containerPort: 80

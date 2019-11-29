@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: http-statefulset
+  labels:
+    app: http
+spec:
+  selector:
+    matchLabels:
+      app: http-statefulset
+  serviceName: "http-statefulset"
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: http-statefulset
+    spec:
+      containers:
+      - name: http-statefulset
+        image: katacoda/docker-http-server
+        ports:
+        - containerPort: 80

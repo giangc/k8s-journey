@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: http-daemonset
+  labels:
+    app: http-daemonset
+spec:
+  selector:
+    matchLabels:
+      app: http-daemonset
+  template:
+    metadata:
+      labels:
+        app: http-daemonset
+    spec:
+      tolerations:
+        - effect: NoSchedule
+          key: node-role.kubernetes.io/master
+      containers:
+      - name: http-daemonset
+        image: katacoda/docker-http-server
+        ports:
+        - containerPort: 80

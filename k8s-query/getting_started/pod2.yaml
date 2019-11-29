@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: happypanda
+  namespace: dev-test1
+  labels: 
+    app: redis
+    segment: backend
+    company: mycompany    
+spec:
+  containers:
+  - name: redis
+    image: redis:4.0.10
+    ports:
+    - name: redisport
+      containerPort: 6379
+      protocol: TCP

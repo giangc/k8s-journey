@@ -53,8 +53,7 @@ missing required field "containerPort" in io.k8s.api.core.v1.ContainerPort, Vali
 
 
 Error | Reason | E.g
---- | --- | ---
-
+----- | ------ | ---
 invalid type for io.k8s.api.core.v1.PodSpec.containers: got "map", expected "array" | Expected an array for containers, and probably start thing with '-' | containers: - name: jenkins
 
 

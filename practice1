@@ -1,0 +1,86 @@
+--------------------
+
+1, Install stuff on ssh linux pvs: via homebrew.. Well lazy fuck
+
+$minikube start 
+
+>> Unable to determine a default driver to use
+
+# Seems i have to setup hypervisor
+$ egrep -q 'vmx|svm' /proc/cpuinfo && echo yes || echo no
+
+# Check ubuntu version:
+lsb_release -a
+
+# assume that im running on the VM
+# Start with none : Bare metal
+$minikube start --vm-driver=none
+>> Msg??: Requested cpu count 1 is less than the minimum allowed of 2 
+
+
+# OK
+
+# Changed to Docs::Assign CPU resource to containers and pods
+
+# enable metric server  .. 
+$ minikube addons enable metrics-server
+
+$ kubectl get apiservices
+
+-------
+# Try to do it on my local mac machine .... 
+# Start the minikube
+$minikube start 
+
+>> Done! kubectl is now configured to use "minikube"
+
+# See all the pods 
+$ kubectl get po -A
+
+# Create a K8s deployment using existing image ../echoserver:1.10
+$ kubectl create deployment hello-minikube --image=k8s.gcr.io/echoserver:1.10
+
+# Expose it as a service. 
+$ $k expose deployment hello-minikube --type=NodePort --port=8080
+
+$ kubectl get pod -A
+
+# get the url via minikube.
+$ minikube service hello-minikube --url
+
+# delete the service
+$ kubectl delete service hello-minikube
+
+# Use local image on Docker daemon. This is used to speed up experiment on local virtual cluster... 
+# Enter this after minikube start
+
+$ eval $(minikube docker-env)
+
+#Enable dashboard in minikube
+$minikube dashboard 
+
+#Run job in the background 
+$minikube dashboard & 
+
+# kill all background jobs
+$kill $(jobs -p)
+
+#Pods for kube-system namespace is required for the k8s system to work including: controllers, addon
+$k get pods -n kube-system; echo
+#Pods for kube-public namespace contains boostrapping and certificate
+$k get pods -n kube-public; echo
+
+$k get pods -n kubernetes-dashboard; echo
+
+# Pods for the default
+$k get pods -n default; echo
+
+
+# Create namespace
+kubectl create namespace dev-test1
+
+#Create namespace via yaml
+kubectl apply -f ./test-namespace.yaml
+
+# List all name space
+kubectl get namespaces

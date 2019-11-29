@@ -1,3 +1,4 @@
 # Kubernetes Practice Contents
 
-1. Getting started: dive it in, reflect later.
+1. getting_started: dive it in, reflect later.
+2. deployment_basic: random deployment practice on katacoda.com

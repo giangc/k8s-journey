@@ -1,0 +1,4 @@
+alias k='kubectl'
+alias kApply='kubectl apply -f'
+alias kNss='kubectl get namespaces'
+alias pdDelete='pod delete'

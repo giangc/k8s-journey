@@ -1,4 +1,3 @@
-
 ## Continue to work on katakoda, However I would need to start again the minikube and shit :) 
 
 Create the namespace via yaml 
@@ -13,33 +12,34 @@ pod-namespace: schedule pod to be run with dev-service1 namespace
 pod2: update pod-namespace 
 `kubectl apply -f pod2.yaml`
 
-## Utils
+Utilities
+-----------
 
-#### Namespace
-# Get all
+## Namespace
+#### Get all
 `kubectl get namespaces`
-# Get single
+#### Get single
 `kubectl get ns test`
 
-# Get single output yaml
+#### Get single output yaml
 `kubectl get ns test -o yaml`
 
-# Describe
+#### Describe
 `kubectl describe ns test`
 
-# delete
+#### delete
 `kubectl delete namespace test`
 
 ## Pod
-### Get
+#### Get
 `kubectl get pods`
 `kubectl get pods -n dev-test1`
 
-### Delete
+#### Delete
 `kubectl delete pod happypanda`
 `kubectl delete pod happypanda -n dev-test1`
 `kubectl delete pod happyelephant -n mynamespace`
-## Error
+#### Error
 - error: error validating "own-practice.yaml": error validating data: [ValidationError(Pod.spec.containers[1]): 
 
 - missing required field "containerPort" in io.k8s.api.core.v1.ContainerPort, ValidationError(Pod.spec.containers[2].ports[2]):

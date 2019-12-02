@@ -4,6 +4,8 @@
 
 - [katacoda-boxboat: Deployment](https://www.katacoda.com/boxboat/courses/kubernetes-basic/module-4)
 
+- [katacoda-contino: Deployment](https://www.katacoda.com/contino/courses/kubernetes/basic-deployments)
+
 - [katacoda-boxboat: Monitoring with Prometheus](https://www.katacoda.com/boxboat/courses/kubernetes-basic/module-6)
 
 - [katacoda-contino: Pods and namespace](https://www.katacoda.com/contino/courses/kubernetes/pods)
@@ -28,3 +30,11 @@
     - (https://kubernetes.io/docs/tasks/administer-cluster/highly-available-master/)
     - (https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/setup-ha-etcd-with-kubeadm/)
 
+
+### Docs references:
+
+- https://prometheus.io/docs/introduction/overview/
+- https://prometheus.io/docs/concepts/data_model/#samples
+- https://prometheus.io/docs/prometheus/latest/querying/basics/
+- https://hub.helm.sh/
+- https://helm.sh/

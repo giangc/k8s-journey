@@ -27,7 +27,7 @@
   - Helm 
     - helm init
     - helm repo update
-    - helm install --name prometheus stable/prometheus
+    - helm install --name prometheus stable/prometheus  ** Currently having some errors
     - helm upgrade -f values.yaml prometheus stable/prometheus
 
   - Error when get pods.
@@ -39,34 +39,34 @@
 	- `kubectl port-forward --address 0.0.0.0 svc/prometheus-server 9090:80 > /dev/null &
 	kubectl port-forward --address 0.0.0.0 svc/prometheus-alertmanager 9093:80 >/dev/null &`
 
+  - config prometheus.
 
------
-
-https://prometheus.io/docs/introduction/overview/
-https://prometheus.io/docs/concepts/data_model/#samples
-https://prometheus.io/docs/prometheus/latest/querying/basics/
-
----- 
-- config prometheus.
-
-` echo "serverFiles:
-  alerts:
-    groups:
-      - name: Instances
-        rules:
-          - alert: InstanceDown
-            expr: up == 0
-            for: 1m
-            labels:
-              severity: page
-            annotations:
-              description: '{{ $labels.instance }} of job {{ $labels.job }} has been down for more than 1 minute.'
-              summary: 'Instance {{ $labels.instance }} down'" > values.yaml `
+	` echo "serverFiles:
+	  alerts:
+	    groups:
+	      - name: Instances
+	        rules:
+	          - alert: InstanceDown
+	            expr: up == 0
+	            for: 1m
+	            labels:
+	              severity: page
+	            annotations:
+	              description: '{{ $labels.instance }} of job {{ $labels.job }} has been down for more than 1 minute.'
+	              summary: 'Instance {{ $labels.instance }} down'" > values.yaml `
 
   > Error: 
 	UPGRADE FAILED
 	ROLLING BACK
 	Error: "prometheus" has no deployed releases
 	Error: UPGRADE FAILED: "prometheus" has no deployed releases
+
+-----
+
+https://prometheus.io/docs/introduction/overview/
+https://prometheus.io/docs/concepts/data_model/#samples
+https://prometheus.io/docs/prometheus/latest/querying/basics/
+https://hub.helm.sh/
+https://helm.sh/
 
 

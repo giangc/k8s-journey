@@ -23,4 +23,7 @@
 - Scale
 - Run:
     - (https://kubernetes.io/docs/tasks/run-application/run-stateless-application-deployment/)
-    
+    - (https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/high-availability/)
+    - (https://kubernetes.io/docs/tasks/administer-cluster/highly-available-master/)
+    - (https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/setup-ha-etcd-with-kubeadm/)
+

@@ -3,21 +3,23 @@
 
 ... This note is not mentioning about how to create multiple nodes and stuff.
 
-#### 1. Label node and schedule pod to that labeled node.
+### 1. Label node and schedule pod to that labeled node.
 
-#### 2. Choose strategy for scheduled pod to K8s cluster.
+### 2. Choose strategy for scheduled pod to K8s cluster.
 
 - Affinity and Anti anfinity: 
 - Soft mode and hard mode: If label defined in pod doesn't exist then assign the pod to somewhere else in a cluster, or do not assigned at all.
 
-#### 3. Technical handling.
+### 3. Technical handling.
 
-Mental note about what sort of actions should be carry-out on this typical tasks:
+#### Mental note
+
 - Display labels of nodes.
 - Assign labels to node.
 - Label needs to be meaningful, describing the fact/something special about that node.
 - Define pod with created label.
 
+#### Practical note
 
 - Get nodes + its label
 kubectl get nodes --show-label

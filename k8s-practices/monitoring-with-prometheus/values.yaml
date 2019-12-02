@@ -1,0 +1,13 @@
+serverFiles:
+  alerts:
+    groups:
+      - name: Instances
+        rules:
+          - alert: InstanceDown
+            expr: up == 0
+            for: 1m
+            labels:
+              severity: page
+            annotations:
+              description: '{{ .instance }} of job {{ .job }} has been down for more than 1 minute.'
+              summary: 'Instance {{ .instance }} down'

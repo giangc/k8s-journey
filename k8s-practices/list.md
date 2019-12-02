@@ -8,6 +8,7 @@
 
 - [katacoda-contino: Pods and namespace](https://www.katacoda.com/contino/courses/kubernetes/pods)
 
+- [katacoda-contino: Pods and namespace]: https://www.katacoda.com/contino/courses/kubernetes/assign-pod-nodes
 
 ### High availability cluster
 - [kubedoc-tasks: setup high k8s cluster master]

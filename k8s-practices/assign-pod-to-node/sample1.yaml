@@ -1,0 +1,280 @@
+apiVersion: v1
+kind: Nodemetadata:  annotations:
+    kubeadm.alpha.kubernetes.io/cri-socket: /var/run/dockershim.sock    node.alpha.kubernetes.io/ttl: "0"
+    volumes.kubernetes.io/controller-managed-attach-detach: "true"
+  creationTimestamp: "2019-12-02T01:57:37Z"
+  labels:    beta.kubernetes.io/arch: amd64    beta.kubernetes.io/os: linux
+    disk: ssd    kubernetes.io/arch: amd64
+    kubernetes.io/hostname: node01
+    kubernetes.io/os: linux
+  name: node01
+  resourceVersion: "16789"
+  selfLink: /api/v1/nodes/node01
+  uid: 1d5ed709-14a7-11ea-9328-0242ac110051
+spec: {}
+status:
+  addresses:
+  - address: 172.17.0.83
+    type: InternalIP
+  - address: node01
+    type: Hostname
+  allocatable:
+    cpu: "4"
+    ephemeral-storage: "42586605088"
+    hugepages-1Gi: "0"
+    hugepages-2Mi: "0"
+    memory: 3943532Ki
+    pods: "110"
+  capacity:
+    cpu: "4"
+    ephemeral-storage: 46209424Ki
+    hugepages-1Gi: "0"
+    hugepages-2Mi: "0"
+    memory: 4045932Ki
+    pods: "110"
+  conditions:
+  - lastHeartbeatTime: "2019-12-02T01:58:24Z"
+    lastTransitionTime: "2019-12-02T01:58:24Z"
+    message: Weave pod has set this
+    reason: WeaveIsUp
+    status: "False"
+    type: NetworkUnavailable
+  - lastHeartbeatTime: "2019-12-02T04:51:55Z"
+    lastTransitionTime: "2019-12-02T01:57:37Z"
+    message: kubelet has sufficient memory available
+    reason: KubeletHasSufficientMemory
+    status: "False"
+    type: MemoryPressure
+  - lastHeartbeatTime: "2019-12-02T04:51:55Z"
+    lastTransitionTime: "2019-12-02T01:57:37Z"
+    message: kubelet has no disk pressure
+    reason: KubeletHasNoDiskPressure
+    status: "False"
+    type: DiskPressure
+  - lastHeartbeatTime: "2019-12-02T04:51:55Z"
+    lastTransitionTime: "2019-12-02T01:57:37Z"
+    message: kubelet has sufficient PID available
+    reason: KubeletHasSufficientPID
+    status: "False"
+    type: PIDPressure
+  - lastHeartbeatTime: "2019-12-02T04:51:55Z"
+    lastTransitionTime: "2019-12-02T01:57:48Z"
+    message: kubelet is posting ready status. AppArmor enabled
+    reason: KubeletReady
+    status: "True"
+    type: Ready
+  daemonEndpoints:
+    kubeletEndpoint:
+      Port: 10250
+  images:
+  - names:
+    - portworx/px-enterprise@sha256:0b9058862f05e3af6cadd7a0aaa092d6115c59269911ac847fee5c533cc9f473
+    - portworx/px-enterprise:2.0.2.3
+    sizeBytes: 2326923453
+  - names:
+    - microsoft/mssql-server-linux@sha256:9b700672670bb3db4b212e8aef841ca79eb2fce7d5975a5ce35b7129a9b90ec0
+    - microsoft/mssql-server-linux:latest
+    sizeBytes: 1353071523
+  - names:
+    - docker.elastic.co/kibana/kibana@sha256:2da2e99561d8df1d2863d7b68a12c0601ed9f65d760d114224241512ce1a14ea
+    - docker.elastic.co/kibana/kibana:6.2.4
+    sizeBytes: 933247846
+  - names:
+    - quay.io/coreos/hyperkube@sha256:699fc03fccb1c4662fee9d996cf30106aea55a6f594d16c1504cc7334dadcee4
+    - quay.io/coreos/hyperkube:v1.7.6_coreos.0
+    sizeBytes: 699395414
+  - names:
+    - istio/examples-bookinfo-reviews-v1@sha256:920d46b3c526376b28b90d0e895ca7682d36132e6338301fcbcd567ef81bde05
+    - istio/examples-bookinfo-reviews-v1:1.8.0
+    sizeBytes: 525046218
+  - names:
+    - istio/examples-bookinfo-reviews-v2@sha256:d2483dcb235b27309680177726e4e86905d66e47facaf1d57ed590b2bf95c8ad
+    - istio/examples-bookinfo-reviews-v2:1.8.0
+    sizeBytes: 525046218
+  - names:
+    - istio/examples-bookinfo-reviews-v3@sha256:8c0385f0ca799e655d8770b52cb4618ba54e8966a0734ab1aeb6e8b14e171a3b
+    - istio/examples-bookinfo-reviews-v3:1.8.0
+    sizeBytes: 525046218
+  - names:
+    - docker.elastic.co/elasticsearch/elasticsearch@sha256:9ae20c753f18e27d1dd167b8675ba95de20b1f1ae5999aae5077fa2daf38919e
+    - docker.elastic.co/elasticsearch/elasticsearch:6.2.4
+    sizeBytes: 514505674
+  - names:
+    - gcr.io/google_samples/gb-frontend@sha256:d44e7d7491a537f822e7fe8615437e4a8a08f3a7a1d7d4cb9066b92f7556ba6d
+    - gcr.io/google_samples/gb-frontend:v4
+    sizeBytes: 512107183
+  - names:
+    - gcr.io/google_samples/gb-frontend@sha256:50b22839aaf6a18586d6751e8963cf684c27b9873ca926df22cdf88ed4452615
+    - gcr.io/google_samples/gb-frontend:v3
+    sizeBytes: 509653334
+  - names:
+    - k8s.gcr.io/redis@sha256:f066bcf26497fbc55b9bf0769cb13a35c0afa2aa42e737cc46b7fb04b23a2f25
+    - k8s.gcr.io/redis:e2e
+    sizeBytes: 418929769
+  - names:
+    - bitnami/mongodb@sha256:d49ef0eb5e8e0bf9eeef25734822a63783ec052f60b01a7fd9869cd72773894f
+    - bitnami/mongodb:3.7.3
+    sizeBytes: 407949591
+  - names:
+    - gcr.io/istio-release/proxyv2@sha256:77915a0b8c88cce11f04caf88c9ee30300d5ba1fe13146ad5ece9abf8826204c
+    - gcr.io/istio-release/proxyv2:1.0.0
+    sizeBytes: 351025559
+  - names:
+    - openstorage/stork@sha256:d63ef9a8b2a53adf58b952119296f42234926f8b2cd9a4c890d2140115531132
+    - openstorage/stork:2.0.1
+    sizeBytes: 324882610
+  - names:
+    - docker.elastic.co/beats/filebeat@sha256:1ab075d016257ee7990f962a11099284e58b00f3d474f042c5d174fd48809eaa
+    - docker.elastic.co/beats/filebeat:6.2.4
+    sizeBytes: 318649092
+  - names:
+    - gcr.io/istio-release/grafana@sha256:2d8f6615009face79acc0f4868eb2f3d769465bbd5957c4bce5d498fc512afbe
+    - gcr.io/istio-release/grafana:1.0.0
+    sizeBytes: 301415612
+  - names:
+    - gcr.io/istio-release/pilot@sha256:db61fb30f321d28c57452bd3fa4ec1592f3c89f5e1d1dc2eb6ef2289c6dd097d
+    - gcr.io/istio-release/pilot:1.0.0
+    sizeBytes: 289304760
+  - names:
+    - k8s.gcr.io/etcd@sha256:17da501f5d2a675be46040422a27b7cc21b8a43895ac998b171db1c346f361f7
+    - k8s.gcr.io/etcd:3.3.10
+    sizeBytes: 258116302
+  - names:
+    - mysql@sha256:e4a70c0f52bfda9ed28d2127b461ff44cbc381450e7ca22e83936560d8875f14
+    - mysql:5.6
+    sizeBytes: 256379036
+  - names:
+    - istio/examples-bookinfo-details-v1@sha256:73e1de909cd387cf377bb51ddd90167d0f44cf0659746d1d0e50276e8f1c9df3
+    - istio/examples-bookinfo-details-v1:1.8.0
+    sizeBytes: 253808639
+  - names:
+    - istio/examples-bookinfo-ratings-v1@sha256:f84302e53e62a8a12510c7f8f437a7a34949be3dfb37f4eb9d054a76436fa4d7
+    - istio/examples-bookinfo-ratings-v1:1.8.0
+    sizeBytes: 217896964
+  - names:
+    - k8s.gcr.io/kube-apiserver@sha256:e29561119a52adad9edc72bfe0e7fcab308501313b09bf99df4a9638ee634989
+    - k8s.gcr.io/kube-apiserver:v1.14.3
+    sizeBytes: 209939996
+  - names:
+    - weaveworks/flux@sha256:cbcb91a7b59e5bb11743505de66dc3a951af2b313dd7dcfee66a2c31e81578ee
+    - weaveworks/flux:1.12.0
+    sizeBytes: 164784277
+  - names:
+    - k8s.gcr.io/kube-controller-manager@sha256:d8dafc4f365d5c5912a48ab54b0cdc75ce16d91c93b62491328f3a26160dfa42
+    - k8s.gcr.io/kube-controller-manager:v1.14.3
+    sizeBytes: 157956828
+  - names:
+    - weaveworks/weave-kube@sha256:103e37b504631f7c762ef6baa79b3e7d2d2cf718accbf659e7cae933b6ca937c
+    - weaveworks/weave-kube:2.5.1
+    sizeBytes: 148122018
+  - names:
+    - istio/examples-bookinfo-productpage-v1@sha256:ed65a39f8b3ec5a7c7973c8e0861b89465998a0617bc0d0c76ce0a97080694a9
+    - istio/examples-bookinfo-productpage-v1:1.8.0
+    sizeBytes: 143937945
+  - names:
+    - gcr.io/google_containers/kube-keepalived-vip@sha256:53877ea990ecb5b69e49bf07872adf298e5fde69ce7c847c26bfbf03fc28e2e0
+    - gcr.io/google_containers/kube-keepalived-vip:0.9
+    sizeBytes: 141971171
+  - names:
+    - portworx/oci-monitor@sha256:f4da6db670305d2aed8794d71eb4d6140eaa52c5a6c3834318dbb07563f8e5b2
+    - portworx/oci-monitor:2.0.2.3
+    sizeBytes: 123402666
+  - names:
+    - prom/prometheus@sha256:0283ae2509e1ccc71830edf382713cc3906aa55ca9418c50911854223829bf0b
+    - prom/prometheus:v2.3.1
+    sizeBytes: 118802648
+  - names:
+    - gcr.io/istio-release/proxy_init@sha256:345c40053b53b7cc70d12fb94379e5aa0befd979a99db80833cde671bd1f9fad
+    - gcr.io/istio-release/proxy_init:1.0.0
+    sizeBytes: 118767394
+  - names:
+    - katacoda/katacoda-cloud-provider@sha256:a3fc724edf55caf8a61601ed0ee63fef1a4a0722a9bdbfe75c4a0162bc20a26a
+    - katacoda/katacoda-cloud-provider:0.0.1
+    sizeBytes: 116021307
+  - names:
+    - prom/prometheus@sha256:129e16b08818a47259d972767fd834d84fb70ca11b423cc9976c9bce9b40c58f
+    - prom/prometheus:v2.2.1
+    sizeBytes: 113268574
+  - names:
+    - gcr.io/google_samples/gb-redisslave@sha256:90f62695e641e1a27d1a5e0bbb8b622205a48e18311b51b0da419ffad24b9016
+    - gcr.io/google_samples/gb-redisslave:v1
+    sizeBytes: 109462535
+  - names:
+    - redis@sha256:ca2d9251c2818df48c6598e01a5bdeab46040dc7ab236abe075d7c7343465177
+    - redis:latest
+    sizeBytes: 95023360
+  - names:
+    - k8s.gcr.io/kube-proxy@sha256:d51258f104b6efdf9a6d739eb1b9453a157fa349f04e1279ece5a8cd277140aa
+    - k8s.gcr.io/kube-proxy:v1.14.3
+    sizeBytes: 82104490
+  - names:
+    - k8s.gcr.io/kube-proxy@sha256:bd414b838473ee9b704ac2c5756cc3d1e536df7daaac26058909a4bdd42a1e89
+    - k8s.gcr.io/kube-proxy:v1.14.0
+    sizeBytes: 82102613
+  - names:
+    - gcr.io/kubernetes-helm/tiller@sha256:d52b34a9f9aeec1cf74155ca51fcbb5d872a705914565c782be4531790a4ee0e
+    - gcr.io/kubernetes-helm/tiller:v2.13.1
+    sizeBytes: 82083791
+  - names:
+    - k8s.gcr.io/kube-scheduler@sha256:de46560aa956cafb23eb0b6cc48926bc6ff24e337ce3fef6a4895a2ea120c30d
+    - k8s.gcr.io/kube-scheduler:v1.14.3
+    sizeBytes: 81578364
+  - names:
+    - weaveworks/scope@sha256:2887407cb701236ad0ac2d581055ab58318f12d352ab25b76a0c516b191fab7a
+    - weaveworks/scope:1.10.1
+    sizeBytes: 75666888
+  - names:
+    - ubuntu@sha256:f08638ec7ddc90065187e7eabdfac3c96e5ff0f6b2f1762cf31a4f49b53000a5
+    - ubuntu:latest
+    sizeBytes: 69856328
+  - names:
+    - weaveworks/scope@sha256:651cc9ac380803a83e19af40943ebece696448b053d3f80f3fd86b430e558606
+    - weaveworks/scope:1.9.1
+    sizeBytes: 68005975
+  - names:
+    - gcr.io/istio-release/galley@sha256:01394fea1e55de6d4c7fbfc28c2dd7462bd26e093008367972b04e29d5b475cf
+    - gcr.io/istio-release/galley:1.0.0
+    sizeBytes: 65758296
+  - names:
+    - gcr.io/istio-release/mixer@sha256:e627b16141c7b32a8944b7a2fbe251407425a50d83d0fb401410550502886930
+    - gcr.io/istio-release/mixer:1.0.0
+    sizeBytes: 64404258
+  - names:
+    - gcr.io/google_containers/kube-scheduler-amd64@sha256:79b5b697b1bc1023b5f18a792ea7020c4ad8403d861169b1b420d3fe673b9fe4
+    - gcr.io/google_containers/kube-scheduler-amd64:v1.8.0
+    sizeBytes: 54884009
+  - names:
+    - gcr.io/istio-release/citadel@sha256:01d182138511deba644e039ecccf87b048c3a88f12e8f0085c873ef7d1734dbf
+    - gcr.io/istio-release/citadel:1.0.0
+    sizeBytes: 51644305
+  - names:
+    - weaveworks/weave-npc@sha256:e51029aa3abcada82c59b5e5161b71dc14c04ca664b53bb1cdd2ebbf850bf258
+    - weaveworks/weave-npc:2.5.1
+    sizeBytes: 49564596
+  - names:
+    - jaegertracing/all-in-one@sha256:23523b6043b849d7a17444dc4b2925d1f7458b5034c560ce79a110399cddfd67
+    - jaegertracing/all-in-one:1.5
+    sizeBytes: 48417035
+  - names:
+    - gcr.io/istio-release/sidecar_injector@sha256:6c5bf3f4cb14a19d90e39532b0e69b0635c7fc468e70d871652ffe4ff54a29bc
+    - gcr.io/istio-release/sidecar_injector:1.0.0
+    sizeBytes: 45252725
+  - names:
+    - k8s.gcr.io/coredns@sha256:02382353821b12c21b062c59184e227e001079bb13ebd01f9d3270ba0fcbf1e4
+    - k8s.gcr.io/coredns:1.3.1
+    sizeBytes: 40283416
+  - names:
+    - quay.io/coreos/etcd@sha256:5b6691b7225a3f77a5a919a81261bbfb31283804418e187f7116a0a9ef65d21d
+    - quay.io/coreos/etcd:latest
+    sizeBytes: 39449808
+  nodeInfo:
+    architecture: amd64
+    bootID: 44979a62-3442-4592-936a-7727f560beda
+    containerRuntimeVersion: docker://18.9.5
+    kernelVersion: 4.4.0-150-generic
+    kubeProxyVersion: v1.14.0
+    kubeletVersion: v1.14.0
+    machineID: a4b94e2c4fa17db3a5297dca5de46f42
+    operatingSystem: linux
+    osImage: Ubuntu 16.04.6 LTS
+    systemUUID: a4b94e2c4fa17db3a5297dca5de46f42

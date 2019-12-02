@@ -43,3 +43,4 @@ kubectl label nodes node01 disk=ssd
   - ` spec.antiAffinity.schedule = preferredDuringScheduleIgnoredDuringExecution `
 - Create anti affinity pod with hard mode
   - ` spec.antiAffinity.schedule = requiredDuringScheduleIgnoredDuringExecution `
+

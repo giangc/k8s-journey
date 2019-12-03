@@ -1,27 +1,18 @@
 1, Install stuff on ssh linux pvs: via homebrew.. Well lazy fuck
-
 $minikube start 
-
 >> Unable to determine a default driver to use
-
 # Seems i have to setup hypervisor
 $ egrep -q 'vmx|svm' /proc/cpuinfo && echo yes || echo no
-
 # Check ubuntu version:
 lsb_release -a
-
 # assume that im running on the VM
 # Start with none : Bare metal
 $minikube start --vm-driver=none
 >> Msg??: Requested cpu count 1 is less than the minimum allowed of 2 
-
 # OK
-
 # Changed to Docs::Assign CPU resource to containers and pods
-
 # enable metric server  .. 
 $ minikube addons enable metrics-server
-
 $ kubectl get apiservices
 
 -------

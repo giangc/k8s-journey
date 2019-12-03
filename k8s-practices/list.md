@@ -10,6 +10,7 @@
 
 - [katacoda-contino: Pods and namespace](https://www.katacoda.com/contino/courses/kubernetes/pods)
 
+- [digital-ocean: Use kubeadm to create a cluster](https://www.digitalocean.com/community/tutorials/how-to-create-a-kubernetes-cluster-using-kubeadm-on-ubuntu-16-04)
 ### High availability cluster
 - [kubedoc-tasks: setup high k8s cluster master]
 

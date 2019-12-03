@@ -1,4 +1,5 @@
 ## Deployment
+[Basic]
 
 ### Generative practice
 - Recall about deployment:
@@ -12,6 +13,10 @@
 
 
 ## Mental Note
+- Create
+- Pause and resume
+- Display status
+- Roll back, roll out
 
 ## Practical Note
 

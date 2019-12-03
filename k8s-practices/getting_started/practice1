@@ -1,5 +1,3 @@
---------------------
-
 1, Install stuff on ssh linux pvs: via homebrew.. Well lazy fuck
 
 $minikube start 
@@ -16,7 +14,6 @@ lsb_release -a
 # Start with none : Bare metal
 $minikube start --vm-driver=none
 >> Msg??: Requested cpu count 1 is less than the minimum allowed of 2 
-
 
 # OK
 

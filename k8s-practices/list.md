@@ -10,8 +10,6 @@
 
 - [katacoda-contino: Pods and namespace](https://www.katacoda.com/contino/courses/kubernetes/pods)
 
-- [katacoda-contino: Pods and namespace]: https://www.katacoda.com/contino/courses/kubernetes/assign-pod-nodes
-
 ### High availability cluster
 - [kubedoc-tasks: setup high k8s cluster master]
 
@@ -22,15 +20,13 @@
 ### Application
 - Setup
 - Deploy
-- Load ballancing
-- Scale
 - Run:
     - (https://kubernetes.io/docs/tasks/run-application/run-stateless-application-deployment/)
     - (https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/high-availability/)
     - (https://kubernetes.io/docs/tasks/administer-cluster/highly-available-master/)
     - (https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/setup-ha-etcd-with-kubeadm/)
 
-
+- Scale
 ### Docs references:
 
 - https://prometheus.io/docs/introduction/overview/
@@ -38,3 +34,9 @@
 - https://prometheus.io/docs/prometheus/latest/querying/basics/
 - https://hub.helm.sh/
 - https://helm.sh/
+
+- [katacoda-playground: 1 master and 1 worker](https://www.katacoda.com/courses/kubernetes/playground)
+- [github-community: e2e node test](https://github.com/kubernetes/kubernetes/tree/master/test/e2e/node)
+
+- [Kubectl-docs](https://kubectl.docs.kubernetes.io/) : Lots of good info on how to manage k8s config by cmd and how to manage them by structure.
+

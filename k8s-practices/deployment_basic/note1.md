@@ -1,3 +1,5 @@
+Tutorial from [boxboat](https://boxboat.com/blog/)
+> This is getting started following a tutorial ...
 ## 3 Types of deployment object api: Deployment StatefulSet DaemonSet
 
 "It is important to note that Deployments leverage and automatically create "ReplicaSets" and
@@ -21,6 +23,4 @@ Create a deployment with 2 replicas | Containers would be some random http serve
 "Run the daemonset on the same pod"
 
 -----------------------------------
-
-Tutorial from [boxboat](https://boxboat.com/blog/)
 

@@ -1,5 +1,19 @@
 ## List of online practices that I went thru for later process of reflection.
 
+### General tips:
+1. How can I craft the complex K8s component in yaml?
+  > Basically just create everything imperatively, using kubectl and output it into a yaml file. Then we can start it from there.  
+
+2. General practices that could cover most of the content of the CKA?
+  > Setup cluster architecture: cluster in install, config, inspect, etc. Networking: cluster to cluster
+  > Stateful App, Stateless App: 
+    - General topics: Networking, Security(AppAmor), Scheduler, Monitoring(probably prometheus, grafana, etc.), CICD setup(Docker hub, Helm, etc.)
+    - K8s component: Node, Pod, Service, kubescheduler, etcd, PV, PVC, StorageName.
+
+3. What I never covered?
+  > Test??? e2e node test.
+  
+
 ### Messy practices
 
 - [katacoda-boxboat: Deployment](https://www.katacoda.com/boxboat/courses/kubernetes-basic/module-4)

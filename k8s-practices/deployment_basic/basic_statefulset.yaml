@@ -20,3 +20,4 @@ spec:
         image: katacoda/docker-http-server
         ports:
         - containerPort: 80
+

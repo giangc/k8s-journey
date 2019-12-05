@@ -7,3 +7,6 @@ alias kNss='kubectl get namespaces'
 alias kDescribePod='kubectl describe pod'
 
 alias pdDelete='pod delete'
+alias kgetPods='kubectl get pods'
+alias kgetSecrets='kubectl get secrets'
+alias kgetSvc='kubectl get services'

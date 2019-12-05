@@ -14,7 +14,7 @@ Create a deployment with 2 replicas | Containers would be some random http serve
  - k get rs
  - k get deploy
  - k get pods -o wide
-   >> IP : 172.17.0.8 have not yet forwarded the ip.
+   > IP : 172.17.0.8 have not yet forwarded the ip.
 
 > basic_ds.yaml
 

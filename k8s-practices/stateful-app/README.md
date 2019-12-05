@@ -10,7 +10,7 @@ Several questions that I should think first.
 
 3. What step by step proceess is this to solve this problem?
   1, Setup the cluster.
-  2, Create a volume: persistent volume -> For database. Create a label: mysql-volume
+  2, Create a volume: persistent volume -> For database. Create a label: mysql-volume 
   3, Create a pod contains all of my containers stack for Wordpress:
     3.2, Networking containers together(Mysql, server app: apache2 and so forth); expose the network into the world
     3.3, Containers: mysql probably needs a label, why? Because it probably shared among other things.

@@ -28,7 +28,14 @@
     - (https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/setup-ha-etcd-with-kubeadm/)
 
 - Scale
-### Docs references:
+
+- Stateless Application
+    - [doc-tutorial](https://kubernetes.io/docs/tutorials/stateless-application/guestbook/)
+
+- Stateful Application
+    - [doc-tutorial](https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/)
+
+### Docs references
 
 - https://prometheus.io/docs/introduction/overview/
 - https://prometheus.io/docs/concepts/data_model/#samples
@@ -37,7 +44,11 @@
 - https://helm.sh/
 
 - [katacoda-playground: 1 master and 1 worker](https://www.katacoda.com/courses/kubernetes/playground)
+
 - [github-community: e2e node test](https://github.com/kubernetes/kubernetes/tree/master/test/e2e/node)
 
 - [Kubectl-docs](https://kubectl.docs.kubernetes.io/) : Lots of good info on how to manage k8s config by cmd and how to manage them by structure.
 
+- [MS - How kube-scheduler work | length: 8 mins](https://www.youtube.com/watch?v=rDCWxkvPlAw)
+
+- [VMware - Grokking kube scheduler | length: 1h 24 mins](https://www.youtube.com/watch?v=XxVHNWoZO_c&t=265s)

@@ -1,4 +1,6 @@
 alias k='kubectl'
-alias kApply='kubectl apply -f'
+alias kApplyFile='kubectl apply -f'
+alias kApplyKus='kubectl apply -k'
+alias kDelFile='kubectl apply -f'
 alias kNss='kubectl get namespaces'
 alias pdDelete='pod delete'

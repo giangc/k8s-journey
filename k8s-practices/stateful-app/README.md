@@ -5,7 +5,7 @@ Several questions that I should think first.
   - This is just an app. And I deploy it on my machine.  [v]
 
 2. What is this consist of?
-  - Multiple containers for Wordpress app: php, mysql, theme, css, html, etc. etc. ~ Never been addressed ~
+  - Multiple containers for Wordpress app: php, mysql, theme, css, html, etc. etc. ~Never been addressed~
   - Volume: File System for database. [v]
 
 3. What step by step proceess is this to solve this problem?
@@ -39,10 +39,11 @@ Several questions that I should think first.
    
    - 
 ## Practical Note
-    
-    - Use cat EOF to input text to kustomisation.yaml file.
+Use cat EOF to input text to kustomisation.yaml file.
+
+
     ```
-    cat <<EOF >./kustomization.yaml
+      cat <<EOF >./kustomization.yaml
       secretGenerator:
          - name: mysql-pass
       literals:

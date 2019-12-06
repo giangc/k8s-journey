@@ -25,6 +25,9 @@
 - [katacoda-contino: Pods and namespace](https://www.katacoda.com/contino/courses/kubernetes/pods)
 
 - [digital-ocean: Use kubeadm to create a cluster](https://www.digitalocean.com/community/tutorials/how-to-create-a-kubernetes-cluster-using-kubeadm-on-ubuntu-16-04)
+- [digital-ocean: Overview in learning k8s](https://dev.to/digitalocean/closing-the-kubernetes-skills-gap-with-developer-first-learning-5aa7)
+- [digital-ocean: K8s for fullstack developer](https://www.digitalocean.com/community/curriculums/kubernetes-for-full-stack-developers#2.Containers,ModernizingApplicationsand12FactorDevelopment)
+
 ### High availability cluster
 - [kubedoc-tasks: setup high k8s cluster master]
 
@@ -51,6 +54,20 @@
 
 - Secrets:
     [doc-concept](https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/)
+- https://www.digitalocean.com/community/tutorials/how-to-create-a-kubernetes-cluster-using-kubeadm-on-ubuntu-16-04
+- https://www.digitalocean.com/community/curriculums/kubernetes-for-full-stack-developers#2.Containers,ModernizingApplicationsand12FactorDevelopment
+- https://www.digitalocean.com/community/tutorials/modernizing-applications-for-kubernetes
+- https://www.digitalocean.com/community/tutorials/how-to-deploy-a-php-application-with-kubernetes-on-ubuntu-18-04
+- https://www.digitalocean.com/community/tutorials/an-introduction-to-service-meshes
+- https://www.digitalocean.com/community/tutorials/how-to-inspect-kubernetes-networking
+- https://www.digitalocean.com/community/tutorials/kubernetes-networking-under-the-hood
+
+- Cluster scheduling system:
+  - Borg
+  - Marathon
+  - Aurora
+  - Tupperware
+
 ### Docs references
 
 - https://prometheus.io/docs/introduction/overview/

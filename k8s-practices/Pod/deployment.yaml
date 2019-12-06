@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+    bar: baz
+    company: good-company
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+      bar: baz
+  template:
+    metadata:
+      labels:
+        app: nginx
+        bar: baz
+    spec:
+      containers:
+      - name: nginx
+        image: nginx

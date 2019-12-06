@@ -49,6 +49,8 @@
 - Stateful Application
     - [doc-tutorial](https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/)
 
+- Secrets:
+    [doc-concept](https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/)
 ### Docs references
 
 - https://prometheus.io/docs/introduction/overview/
@@ -66,3 +68,7 @@
 - [MS - How kube-scheduler work | length: 8 mins](https://www.youtube.com/watch?v=rDCWxkvPlAw)
 
 - [VMware - Grokking kube scheduler | length: 1h 24 mins](https://www.youtube.com/watch?v=XxVHNWoZO_c&t=265s)
+
+## Public tutorial images:
+- - name: redis  image: redis:4.0.10
+-   - name: nginx    image: nginx

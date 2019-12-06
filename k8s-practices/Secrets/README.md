@@ -1,10 +1,11 @@
 ## Secrets 
-## Mental Note 
+
+## Mental Note
 - Create and encode secret via yaml or cmd
 - Reference to secrets via name, label, selector, annotations.
+- Use secret file from pod
 
 ## Practical Note
-
 echo -n 'admin' | base_64 > username.txt
 echo -n '123456' | base_64 > password.txt
 
@@ -35,11 +36,69 @@ k create secret generic my-secret --from-file ./username.txt --from-file ./passw
     EOF
   ```
 
-- Decode secret: E.g. with base64, basically just base64 --decode.
+- Encode secret: i.e: with base64 *actually base64 is kinda useless*
+    > To encode: echo -n "myusername123" | base64
+    > To decode: echo -n "myusername123" | base64 --decode
+
 - Mount a secret as ENVIRONMENT VARIABLE into container volume, so my pod could use it.
 
-## Side notes:
+- Create pod from: 
+    > `k run pod --image-name nginx` will default with **Restart policy**. To delete it, get deployments and delete the deployment.
+- Create pod with iamge busybox and restart policy = never
+  > `k run pod --image=busybox --restart=Never` --> Status=COMPLETED.
+- Projection secret to specified path
+    > `pod.spec.containers.volumeMounts:` 
+        - name
+        - mountPaths
+        - readOnly
 
+- Give permission to secret files
+    > `mode: 511`  **Not know yet: how to intepret into octonal value at the moment** 
+
+- Consume file by running cmd inside a pod's container
+    > **Not known yet**
+- Composition of a secret inside a pod:
+    Composition of Pod:
+    - Pod 
+        - metadata
+            ... 
+        - spec
+            - volumes
+                - name
+                - secret
+    Composition of Secret:
+        - secret
+            - secretName
+            - items
+                - key
+                - path
+                - mode
+
+- `kubectl create secret generic ssh-key-secret --from-file=ssh-privatekey=/path/to/.ssh/id_rsa --from-file=ssh-publickey=/path/to/.ssh/id_rsa.pub`
+
+```
+    volumes:
+    - name: secret-volume
+        secret:
+        secretName: ssh-key-secret
+    containers:
+    - name: ssh-test-container
+        image: mySshImage
+        volumeMounts:
+        - name: secret-volume
+        readOnly: true
+        mountPath: "/etc/secret-volume"
+```    
+
+- **Use-Case** Pods with prod / test credentials
+    - `kubectl create secret generic prod-db-secret --from-literal=username=produser --from-literal=password=Y4nys7f11`
+    - `kubectl create secret generic test-db-secret --from-literal=username=testuser --from-literal=password=iluvtests`
+
+- **Use-case**: Dotfiles in secret volume
+
+- **Use-case**: Secret visible to one container in a pod
+
+## Side notes:
 - How to use secrets:
 
 --
@@ -57,3 +116,8 @@ k create secret generic my-secret --from-file ./username.txt --from-file ./passw
   a, What is the difference between stringData and data? E.g data.username= & stringdata.username=
    > stringData will be used over data.
   
+  b, Is this true if Delete a deployment will delete a namespace?
+  What is 'mode: 511' for? 
+  How can I put mode read-only for secret file?
+
+

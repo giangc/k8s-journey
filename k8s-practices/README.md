@@ -1,5 +1,4 @@
 # Kubernetes Practice Contents
-Try to learn basic thing on minikube ... 
+Learning in progress ... 
 
-1. getting_started: dive it in, reflect later.
-2. deployment_basic: random deployment practice on katacoda.com
+[Exercises listing](https://github.com/giangc/k8s-journey/blob/master/k8s-practices/list.md)

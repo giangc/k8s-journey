@@ -86,6 +86,9 @@
 
 - [VMware - Grokking kube scheduler | length: 1h 24 mins](https://www.youtube.com/watch?v=XxVHNWoZO_c&t=265s)
 
+- [Setup and config kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/#pod-network)
+- [Great example on kubeadm in local multipass](https://github.com/arashkaffamanesh/kubeadm-multipass)
+
 ## Public tutorial images:
 - - name: redis  image: redis:4.0.10
--   - name: nginx    image: nginx
+- - name: nginx  image: nginx

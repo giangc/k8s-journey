@@ -9,7 +9,9 @@ Following [arashkaffamanesh/kubeadm-multipass](https://github.com/arashkaffamane
 
 - deploy-kubeadm-matser.sh
 - deploy-nodes.sh
+- `multipass launch --name master --mem 2G --disk 4G`
 
+```
 cat <<EOF > 1-deploy-kubeadm-matser.sh
 #!/bin/bash
 multipass launch ubuntu --name master --cpus 2 --disk 8G
@@ -41,7 +43,9 @@ kubectl get nodes -o wide
 echo "Enjoy the kubeadm made Kubernetes 1.6.x on Multipass"
 echo "Now deploying the worker nodes"
 EOF
+```
 
+```
 cat <<EOF > daemon.json
 {
   "exec-opts": ["native.cgroupdriver=systemd"],
@@ -52,4 +56,9 @@ cat <<EOF > daemon.json
   "storage-driver": "overlay2"
 }
 EOF
+```
 
+## QA
+ - How do I recover unknown state of multipass? 
+  > 0.8 is out of dated. Upgrade to 0.9
+  

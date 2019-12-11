@@ -15,7 +15,7 @@
 
 # export -f creatingNodes
 # export -f printing
-# multipass delete worker1 | multipass purge | multipass list
+# multipass delete worker1 worker2| multipass purge | multipass list
 # multipass launch ubuntu --name worker1 --cpus 2 --disk 4G;
 NODES=$(echo worker{1..2});
     for NODE in ${NODES}; 

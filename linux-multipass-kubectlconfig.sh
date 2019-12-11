@@ -1,21 +1,30 @@
 # LINUX
-# Check number of CPUs
-lscpu --online --parse=Core,Socket | grep --invert-match '^#' | sort --unique | wc --lines
-# OR
-grep ^cpu\\scores /proc/cpuinfo | uniq |  awk '{print $4}' 
 
-# Multipass
+### Check
+# spec1 
+lscpu --online --parse=Core,Socket | grep --invert-match '^#' | sort --unique | wc --lines
+# spec2
+grep ^cpu\\scores /proc/cpuinfo | uniq |  awk '{print $4}' 
+sudo snap install microk8s --classic
+
+### Basic:
+#Assigning and looping
+nodes=$(echo number{1..10})
+
+### Multipass
 multipass exec microk8s-vm -- sudo /snap/bin/microk8s.config > kubeconfig2
 
-# kubectl config
+### kubectl config
 
-# -> merge kubeconfig.
+# Merge kubeconfig.
 export KUBECONFIG=$KUBECONFIG:kubeconfig3
 kubectl config view
 
-# -> Change context
+# Change context
 kubectl config --kubeconfig=config use-context node01
 kubectl config use-context microk8s
 
-# -> Check status of service
+# Check status of service
 microk8s.status
+
+

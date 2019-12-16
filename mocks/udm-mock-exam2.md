@@ -8,9 +8,12 @@
 4. A pod definition file is created at /root/use-pv.yaml. Make use of this manifest file and mount the persistent volume called pv-1. Ensure the pod is running and the PV is bound.
 mountPath: /data persistentVolumeClaim Name: my-pvc
 
-[ ] persistentVolume Claim configured correctly
-[ ] pod using the correct mountPath
-[ ] pod using the persistent volume claim?
+- [ ] persistentVolume Claim configured correctly
+
+- [ ] pod using the correct mountPath
+
+- [ ] pod using the persistent volume claim?
+
 
 5. Create a new deployment called nginx-deploy, with image nginx:1.16 and 1 replica. Record the version. Next upgrade the deployment to version 1.17 using rolling update. Make sure that the version upgrade is recorded in the resource annotation.
 

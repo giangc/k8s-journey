@@ -3,7 +3,7 @@
 ## Linux skills
  - [x] (i-reversed-search)
    - Search text thru cmds history from the recent to the oldest.
-   1. [Ctr + r] Trigger;
+   1. [Ctr + r] Trigger and keep till found the right one;
    2. Type the keyword.
    3. Right arrow.
  - vim

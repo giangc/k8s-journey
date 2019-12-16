@@ -10,6 +10,10 @@
    - [ ] Navigate to beginning or end or text
  - [x] Systemd
    - Controling system service in Linux, where the basic is you can list, check status, stop, start, restart services. I.e kubelet service.
+   - `systemctl status kubelet`
+   - `systemctl list | grep .service`
+   - `systemctl stop | start | restart kubelet`
+   
  - **Useful random stuff that I saw somewhere, lol.**
    - [ ] ls -ltr | tail -2
    - [ ] cat csr | base64 | tr -d "\n"

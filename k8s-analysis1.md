@@ -4,16 +4,15 @@
 
 - [x] research basic actions(verb)
 - [x] research basic components
-- [ ] basic combinations
+- [ ] (basic combination)[k8s-analysis1-basic-combination.md]
 - [ ] action-driven list
 
 --------
  
  ### research basic actions(verb)
  - https://medium.com/bb-tutorials-and-thoughts/practice-enough-with-these-questions-for-the-ckad-exam-2f42d1228552
-
-    - List
     - Create
+    - List
     - Output
     - Get
     - Delete

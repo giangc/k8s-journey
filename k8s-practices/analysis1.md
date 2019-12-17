@@ -1,0 +1,144 @@
+# RunningExam.Research
+
+## todo list 1
+
+- [x] research basic actions(verb)
+- [x] research basic components
+- [ ] basic combinations
+- [ ] action-driven list
+
+--------
+ 
+ ### research basic actions(verb)
+ - https://medium.com/bb-tutorials-and-thoughts/practice-enough-with-these-questions-for-the-ckad-exam-2f42d1228552
+
+    - List
+    - Create
+    - Output
+    - Get
+    - Delete
+    - Update/Change/Modify
+    - Check/Verify Log/Metric
+    - Run cmd
+    - Annotate
+    - Scale
+    - Undo
+    - Rollout/Rollback/Resume/Rolling   Update
+    - Clean
+    - Copy
+    - Watch
+    - Exec
+    - Schedule
+
+- https://github.com/kelseyhightower/kubernetes-the-hard-way
+    - Installing
+    - Provisioning
+    - Generating
+    - Bootstraping
+    - Configuring
+    - Deploying
+    - Test
+    - Cleaning up
+
+- https://github.com/dgkanatsios/CKAD-exercises/blob/master/
+    - Create
+    - Get
+    - Change
+    - Log
+    - Show
+    - Remove
+    - Label
+    - Annotate
+    - View
+    - Check/Verify/Confirm
+    - Undo
+    - Scale/autoscale
+    - Delete
+    - Pause
+    - Watch/Follow/See
+    - Limits
+    - Hit
+    - Declare
+    - Connect
+
+### research basic components
+- https://medium.com/bb-tutorials-and-thoughts/practice-enough-with-these-questions-for-the-ckad-exam-2f42d1228552
+    
+    - Pod
+    - Namespace
+    - Jsonpath
+    - Cluster
+    - Image
+    - IP Address
+    - Timestamp
+    - Container
+    - Container port
+    - Container logging
+    - Multi container
+    - Command
+    - Metrics
+    - Label
+    - Label env=prod
+    - Label env=test
+    - Selectors
+    - Annotation
+    - Deployment
+    - Node
+    - Node master
+    - Node name
+    - Node selector
+    - Policy
+    - RestartPolicy
+    - DNSPolicy
+    - Resource
+    - Name
+    - Replicas
+    - RecplicaSet
+    - Target CPU
+    - HPA
+    - Job
+    - Image
+    - Cronjob
+    - Persistent Volume
+    - Persistent Volume Claim
+    - Config Map
+    - Security Context
+    - Application Resource mananagement
+    - Application Monitoring
+    - Secret
+    - ServiceAccounts
+    - Process
+    - Process ID
+    - Memory
+    - Environment Variable
+    - Probes 
+    - LivenessProbes
+    - ReadinessProbes
+    - State
+    - Events
+    - Service
+    - Network Policy
+    - NodePort
+    - Ingress
+    - ingress traffic
+    - Network Policy
+
+- https://github.com/kelseyhightower/kubernetes-the-hard-way
+    - Cluster
+        - CoreDNS
+        - Containerd
+        - CNI
+        - Etcd
+        - Control plane
+        - Worker node
+        - etcd cluster
+        - DNS Cluster
+    - Resource
+    - Client Tools
+    - CA certificate
+    - TLS certificate
+    - Configuration files for Authentication
+    - Data Encryption and Key 
+    - Kubectl for remote access
+    - Pod network routes
+    - Test:e2e, smoke

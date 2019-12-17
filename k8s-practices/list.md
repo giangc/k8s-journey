@@ -82,13 +82,32 @@
 
 - [Kubectl-docs](https://kubectl.docs.kubernetes.io/) : Lots of good info on how to manage k8s config by cmd and how to manage them by structure.
 
-- [MS - How kube-scheduler work | length: 8 mins](https://www.youtube.com/watch?v=rDCWxkvPlAw)
+- [x] [MS - How kube-scheduler work | length: 8 mins](https://www.youtube.com/watch?v=rDCWxkvPlAw)
 
-- [VMware - Grokking kube scheduler | length: 1h 24 mins](https://www.youtube.com/watch?v=XxVHNWoZO_c&t=265s)
+- [x] [VMware - Grokking kube scheduler | length: 1h 24 mins](https://www.youtube.com/watch?v=XxVHNWoZO_c&t=265s)
 
 - [Setup and config kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/#pod-network)
-- [Great example on kubeadm in local multipass](https://github.com/arashkaffamanesh/kubeadm-multipass)
+- [x] [Great example on kubeadm in local multipass](https://github.com/arashkaffamanesh/kubeadm-multipass)
 
 ## Public tutorial images:
 - - name: redis  image: redis:4.0.10
 - - name: nginx  image: nginx
+
+## research-online-about-certificate()
+
+- [x] (platformer.com/ : Software Architect - How I pass CKAs)[https://medium.com/platformer-blog/how-i-passed-the-cka-certified-kubernetes-administrator-exam-8943aa24d71d]
+  - Can access anything under kubernetes.io domain:
+    - kubectl cheatsheet
+    - Discussion forum
+    - Documentation
+  - kubectl explain resource.key
+
+- (Cmd practices thur certificate)[https://medium.com/bb-tutorials-and-thoughts/practice-enough-with-these-questions-for-the-ckad-exam-2f42d1228552]
+
+- (Online tips/exercises 1)[https://github.com/dgkanatsios/CKAD-exercises/blob/master/a.core_concepts.md]
+
+- [x] (kubernetes-the-hard-way)[https://github.com/kelseyhightower/kubernetes-the-hard-way/]
+
+- (Just another list)[https://docs.google.com/spreadsheets/d/10NltoF_6y3mBwUzQ4bcQLQfCE1BWSgUDcJXy-Qp2JEU/edit#gid=391253787] : Should kinda review the list ...
+- http://www.kubernet.io/
+- https://dzone.com/articles/preparing-for-the-certified-kubernetes-administrat

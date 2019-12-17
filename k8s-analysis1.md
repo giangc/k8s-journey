@@ -4,7 +4,7 @@
 
 - [x] research basic actions(verb)
 - [x] research basic components
-- [basic combination](k8s-analysis1-basic-combination.md)
+- [x] [basic combination](k8s-analysis1-basic-combination.md)
 - [ ] action-driven list
 
 --------

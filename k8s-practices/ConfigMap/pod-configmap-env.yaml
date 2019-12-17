@@ -1,0 +1,20 @@
+#Configure all key-value pairs in a ConfigMap as container environment variables
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: my-pod-2
+  name: my-pod-2
+spec:
+  containers:
+  - name: my-pod-1
+    image: k8s.gcr.io/busybox
+    command: ["/bin/sh", "-c", "env"]
+    envFrom:
+    - configMapRef:
+        name: configmap-1
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Never
+status: {}

@@ -5,7 +5,9 @@
 - [x] research basic actions(verb)
 - [x] research basic components
 - [x] [basic combination](k8s-analysis1-basic-combination.md)
-- [ ] action-driven list
+- [x] action-driven list
+- [x] basic-action-driven list
+- [ ] variation in combination
 
 --------
  
@@ -16,13 +18,13 @@
     - Output
     - Get
     - Delete
+    - Rollout/Rollback/Resume/Rolling Update
     - Update/Change/Modify
     - Check/Verify Log/Metric
     - Run cmd
     - Annotate
     - Scale
     - Undo
-    - Rollout/Rollback/Resume/Rolling   Update
     - Clean
     - Copy
     - Watch
@@ -65,38 +67,15 @@
     
     - Pod
     - Namespace
-    - Jsonpath
     - Cluster
-    - Image
-    - IP Address
-    - Timestamp
     - Container
     - Container port
     - Container logging
-    - Multi container
-    - Command
-    - Metrics
-    - Label
-    - Label env=prod
-    - Label env=test
-    - Selectors
-    - Annotation
-    - Deployment
     - Node
     - Node master
     - Node name
     - Node selector
-    - Policy
-    - RestartPolicy
-    - DNSPolicy
-    - Resource
-    - Name
-    - Replicas
-    - RecplicaSet
-    - Target CPU
-    - HPA
     - Job
-    - Image
     - Cronjob
     - Persistent Volume
     - Persistent Volume Claim
@@ -106,6 +85,30 @@
     - Application Monitoring
     - Secret
     - ServiceAccounts
+    - Jsonpath
+    - Image
+    - IP Address
+    - Timestamp
+    - Multi container
+    - Command
+    - Metrics
+    - Label
+    - Label env=prod
+    - Label env=test
+    - Selectors
+    - Annotation
+    - Deployment
+    - RecplicaSet
+    - DaemonSet
+    - StatefulSet
+    - Policy
+    - RestartPolicy
+    - DNSPolicy
+    - Resource
+    - Name
+    - Replicas
+    - Target CPU
+    - HPA
     - Process
     - Process ID
     - Memory

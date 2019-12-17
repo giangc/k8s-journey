@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: my-pod-4
+  name: my-pod-4
+spec:
+  containers:
+  - name: my-pod-4
+    image: k8s.gcr.io/busybox
+    command: ["/bin/sh", "-c", "echo $(SPECIAL_LEVEL_KEY) $(SPECIAL_TYPE_KEY)"]
+    env:
+      - name: SPECIAL_LEVEL_KEY
+        valueFrom:
+          configMapKeyRef:
+            name: special-config-1
+            key: SPECIAL_LEVEL
+      - name: SPECIAL_TYPE_KEY
+        valueFrom:
+          configMapKeyRef:
+            name: special-config-1 
+            key: SPECIAL_TYPE
+  restartPolicy: Never

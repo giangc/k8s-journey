@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: my-pod-5
+  name: my-pod-5
+spec:
+  containers:
+  - name: my-pod-5
+    image: k8s.gcr.io/busybox
+    command: ["/bin/sh", "-c", "ls /etc/config/"]
+    volumeMounts:
+    - name: config-volume
+      mountPath: /etc/config
+  volumes:
+    - name: config-volume
+      configMap:
+        name: special-config-1      
+  restartPolicy: Never

@@ -7,21 +7,34 @@
   2. Type the keyword.
   3. Right arrow.
 - vim
+  - tldr vim for something that get you going...
+
   - [x] Enter Edit mode: `ESC + i`
+  
   - [x] Save and quit: `ESC + wq`
+  
   - [x] Quit without saving: `ESC + q!`
+  
   - [x] Delete single line: point to deleting line; `ESC + :d`
+  
   - [x] Search text: ESC + /search_pattern; press `n` or `N` for next/previous search
+  
   - [x] Search and replace text whole file: ESC + `:%s/search_pattern/replacement/g`
+  
   - [x] Undo: ESC + `:u`
+  
   - [x] Move to start of line: ESC + `:0`
+  
   - [x] Move to end of line: ESC + `:$`
+  
   - [x] Copy line:
     - Select: `v` or `V` - select visual or select the whole line
     - Cut: `d` - select visual or select the whole line
     - Copy: `y`
     - Paste: `P` or `p` - paste before or after
   
+  - [x] Stepping thru words back and forth: `b` and `w`
+
   - **ESC is kinda like boss command which helps to escape from interactive mode**
 
  - [x] Systemd

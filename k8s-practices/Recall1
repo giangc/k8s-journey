@@ -1,0 +1,15 @@
+Why action first instead of component -> Because action is shorter, 
+familiar, repeatative, that's why it's easier to remmember.
+
+Actions: Create, Delete, Change/apply/modify, Rollout, rollback, rollout 
+update, show/display/describe/explain/check/verify.
+
+Components: 
+ - Cluster, Node,
+ - Pod, Container, Namespace, Deployment(Repicas, StatefulSet, DaemonSet)
+ Service, Persistent Volume, Persistent Volume Claim
+ - Job, CronJob, Label, Annotation, Selector
+ - ConfigMap, Secret
+ - Monitoring(Prometheus, grafana), Networking(CNI, Ingress)
+ - Tools: kubeadm, kubeblet, kubectl, kubeapiserver
+ 

@@ -13,10 +13,18 @@
 - Use ConfigMap in Pod as Environment Variable
 - Use ConfigMap data to populate Volume
 - Use ConfigMap data to populate specific path in Volume
+- Check ConfigMap used in Pod using logs.
 
 ## Error
  - `error: cannot exec into a container in a completed pod; current phase is Succeeded`
 
+## Practical note
+- Kubectcl
+    - `kubectl logs pod-1`
+
+- Yaml
+
+ 
 ## QA
 1. What's differences between --from-env-file and --from-file? 
 2. I create a pod: container img = busybox. As a result, the status is Completed, How can I make it run?

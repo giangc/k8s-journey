@@ -13,7 +13,7 @@
 - Use ConfigMap in Pod as Environment Variable
 - Use ConfigMap data to populate Volume
 - Use ConfigMap data to populate specific path in Volume
-- Check ConfigMap used in Pod using logs.
+- Check ConfigMap used in Pod using logs
 
 ## Error
  - `error: cannot exec into a container in a completed pod; current phase is Succeeded`

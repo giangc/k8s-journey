@@ -14,10 +14,13 @@ nodes=$(echo number{1..10})
 
 # Multipass
 multipass exec microk8s-vm -- sudo /snap/bin/microk8s.config > kubeconfig2
+multipass exec etcd-cluster -- sudo wget -q http://github.com/coreos/etcd/releases/download/v3.3.5/etcd-v3.3.5-linux-amd64.tar.gz
 microk8s.status
 multipass list
 multipass shell <instance_name>
+multipass launch --name funny-cluster
 
+tar -xvf
 # kubectl
 # Config
 

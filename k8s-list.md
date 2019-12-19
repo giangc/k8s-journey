@@ -28,9 +28,7 @@
 - [digital-ocean: K8s for fullstack developer](https://www.digitalocean.com/community/curriculums/kubernetes-for-full-stack-developers#2.Containers,ModernizingApplicationsand12FactorDevelopment)
 
 ### High availability cluster
-- [kubedoc-tasks: setup high k8s cluster master]
-
-- (https://kubernetes.io/docs/tasks/administer-cluster/highly-available-master/)
+- [kubedoc-tasks: setup high k8s cluster master](https://kubernetes.io/docs/tasks/administer-cluster/highly-available-master/)
 
 - (https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/high-availability/)
 
@@ -68,7 +66,6 @@
   - Tupperware
 
 ### Docs references
-
 - https://prometheus.io/docs/introduction/overview/
 - https://prometheus.io/docs/concepts/data_model/#samples
 - https://prometheus.io/docs/prometheus/latest/querying/basics/

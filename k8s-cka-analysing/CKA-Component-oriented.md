@@ -1,43 +1,47 @@
 # CKA-Component-oriented
 
-Cluster:: Set up and design
+- Cluster:: Set up and design
 
-Cluster:: Run
+- Cluster:: Run
 
-Cluster:: Config high-availability
-    
+- Cluster:: Config high-availability
+
     - [Doc- HA Cluster](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/high-availability/)
     - https://kubernetes.io/docs/tasks/administer-cluster/highly-available-master/
 
-Cluster:: Release binaries based on Cluster
+- Cluster:: Release binaries based on Cluster
+    
     - https://kubernetes.io/docs/setup/#prebuilt-binary-release ?? 
 
-Cluster::Infrastructure:: Provisioning to deploy cluster
+- Cluster::Infrastructure:: Provisioning to deploy cluster
+    
     - https://github.com/kelseyhightower/kubernetes-the-hard-way/blob/f9486b081f8f54dd63a891463f0b0e783d084307/docs/01-infrastructure-gcp.md
 
-Cluster::Infrastructure:: Choose configuration
+- Cluster::Infrastructure:: Choose configuration
+    
     - https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/
     - https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/high-availability/
     
-Cluster::Infrastructure:: Choose networking
+- Cluster::Infrastructure:: Choose networking
+    
     - https://kubernetes.io/docs/concepts/cluster-administration/networking/
     - https://kubernetes.io/docs/tasks/administer-cluster/network-policy-provider/calico-network-policy/
     - https://kubernetes.io/docs/tasks/administer-cluster/network-policy-provider/cilium-network-policy/
     - https://kubernetes.io/docs/tasks/administer-cluster/network-policy-provider/kube-router-network-policy/
 
-Cluster::Dev:: Run end to end test on Node and Cluster
+- Cluster::Dev:: Run end to end test on Node and Cluster
     - [github-community: e2e node test](https://github.com/kubernetes/kubernetes/tree/master/test/e2e/node)
 
-Cluster::Dev:: Analyse end to end test result
+- Cluster::Dev:: Analyse end to end test result
 
-Cluster::Maintainance::backup
+- Cluster::Maintainance::backup
 
-Cluster::Maintainance::restore
+- Cluster::Maintainance::restore
   
     - [Backup and restore by config etcd](https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/)
     - [Progress](./k8s-journey/k8s-practices/etcd/README.md)
  
-Cluster::Maintainance::process of upgrade os
+- Cluster::Maintainance::process of upgrade os
     
     - https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/
     - https://cloud.google.com/kubernetes-engine/docs/how-to/upgrading-a-cluster
@@ -46,20 +50,20 @@ Cluster::Maintainance::process of upgrade os
     
     - https://kubernetes.io/docs/tasks/debug-application-cluster/resource-usage-monitoring/
 
-Cluster::Log::management
+- Cluster::Log::management
     
     - https://kubernetes.io/docs/tasks/debug-application-cluster/debug-cluster/
 
-Cluster::Architecture
+- Cluster::Architecture
    
    - https://kubernetes.io/docs/concepts/overview/components/
 
 ------
 
-- [ ] SecuredPractice::Config authentication and authorisation
+- [x] SecuredPractice::Config authentication and authorisation
 SecuredPractice::Config TLS for cluster
     - [Provisioning certificates and permission](https://github.com/mmumshad/kubernetes-the-hard-way/blob/master/docs/04-certificate-authority.md)
-    - [Progress](../k8s-journey/k8s-practices/Secured-Cluster/README.md)
+    - [Progress](../k8s-practices/Secured-Cluster/README.md)
 
 - SecuredPractice::Config secured images
     - https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
@@ -134,9 +138,8 @@ Objects:: API primitives
     - https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes
 
 - [ ] PersistentVolumeClaim::
-    
-    - https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims
 
+    - https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims
 
 ------
 

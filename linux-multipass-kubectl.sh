@@ -43,6 +43,10 @@ kubectl get pods -l run=my-nginx -o wide
 # KUBERNETES_SERVICE_PORT_HTTPS=443
 kubectl exec my-nginx-3800858182-jr4a2 -- printenv | grep SERVICE
 kubectl exec my-nginx-75897978cd-chhk6 -- printenv | grep SERVICE
+kubectl exec -it security-context-demo-2 -- sh
+kubectl exec security-context-demo-2 -- printenv
 kubectl scale deployment my-nginx --replicas=0; kubectl scale deployment my-nginx --replicas=2;
 kubectl get pods -l run=my-nginx -o wide
 kubectl create deployment nginx --image=nginx -o yaml --dry-run
+kubectl run --generator=run-pod/v1 security-context-demo --image=busybox --dry-run -o yaml > security-context-demo.yaml
+

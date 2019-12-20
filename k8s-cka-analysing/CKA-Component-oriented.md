@@ -68,7 +68,7 @@ SecuredPractice::Config TLS for cluster
 - SecuredPractice::Config secured images
     - https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
 
-- [ ] SecuredPractice::Config secured context
+- [x] SecuredPractice::Config secured context
     - https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
 
 - [ ] SecuredPractice::Config network policy

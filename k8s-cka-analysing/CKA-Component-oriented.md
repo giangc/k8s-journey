@@ -102,6 +102,7 @@ Objects:: API primitives
 -  Deployment::Understand the deployment
 - [ ] Deployment::Update and rollback
     - https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+
 ------ 
 
 - [ ] Scheduller::config with multiple schedulers to run pods
@@ -136,6 +137,7 @@ Objects:: API primitives
 
 
 - Failure::ControllPlane
+
 - Failure::Node
     - https://kubernetes.io/docs/tasks/debug-application-cluster/debug-cluster/
 
@@ -146,5 +148,4 @@ Objects:: API primitives
 
 - https://kubernetes.io/docs/tasks/manage-daemon/update-daemon-set/
 - https://kubernetes.io/docs/tasks/manage-daemon/rollback-daemon-set/
-
 - https://kubernetes.io/docs/tutorials/stateful-application/zookeeper/

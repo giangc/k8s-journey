@@ -1,7 +1,11 @@
+# CKA-Component-oriented
 
 Cluster:: Set up and design
+
 Cluster:: Run
+
 Cluster:: Config high-availability
+    
     - [Doc- HA Cluster](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/high-availability/)
     - https://kubernetes.io/docs/tasks/administer-cluster/highly-available-master/
 
@@ -29,21 +33,26 @@ Cluster::Dev:: Analyse end to end test result
 Cluster::Maintainance::backup
 
 Cluster::Maintainance::restore
+  
     - [Backup and restore by config etcd](https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/)
     - [Progress](./k8s-journey/k8s-practices/etcd/README.md)
  
 Cluster::Maintainance::process of upgrade os
+    
     - https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/
     - https://cloud.google.com/kubernetes-engine/docs/how-to/upgrading-a-cluster
 
 - [ ] Cluster::Monitor
+    
     - https://kubernetes.io/docs/tasks/debug-application-cluster/resource-usage-monitoring/
 
 Cluster::Log::management
+    
     - https://kubernetes.io/docs/tasks/debug-application-cluster/debug-cluster/
 
 Cluster::Architecture
-    - https://kubernetes.io/docs/concepts/overview/components/
+   
+   - https://kubernetes.io/docs/concepts/overview/components/
 
 ------
 
@@ -119,11 +128,13 @@ Objects:: API primitives
 ------
 
 - [ ] PersistentVolume::
+ 
     - https://kubernetes.io/docs/concepts/storage/persistent-volumes/
     - https://kubernetes.io/docs/tasks/configure-pod-container/configure-volume-storage/
     - https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes
 
 - [ ] PersistentVolumeClaim::
+    
     - https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims
 
 

@@ -1,5 +1,6 @@
 #!/bin/bash
-read -p "Input topic: " topic
+echo "Taking params as a topic ..." 
+topic=$1
 
 mkdir $topic
 cd $topic

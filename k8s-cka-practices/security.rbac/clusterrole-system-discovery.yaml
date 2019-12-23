@@ -1,0 +1,27 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  annotations:
+    rbac.authorization.kubernetes.io/autoupdate: "true"
+  creationTimestamp: "2019-12-23T03:57:39Z"
+  labels:
+    kubernetes.io/bootstrapping: rbac-defaults
+  name: system:discovery
+  resourceVersion: "46"
+  selfLink: /apis/rbac.authorization.k8s.io/v1/clusterroles/system%3Adiscovery
+  uid: e3802e72-ac4e-4f84-934e-ca3640ccf9ba
+rules:
+- nonResourceURLs:
+  - /api
+  - /api/*
+  - /apis
+  - /apis/*
+  - /healthz
+  - /livez
+  - /openapi
+  - /openapi/*
+  - /readyz
+  - /version
+  - /version/
+  verbs:
+  - get

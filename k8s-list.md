@@ -114,3 +114,5 @@
 - http://www.kubernet.io/
 
 - https://dzone.com/articles/preparing-for-the-certified-kubernetes-administrat
+
+- https://training.play-with-kubernetes.com/kubernetes-workshop/

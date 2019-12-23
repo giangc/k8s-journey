@@ -74,7 +74,7 @@ SecuredPractice::Config TLS for cluster
 - [x] SecuredPractice::Config network policy
     - [x] https://kubernetes.io/docs/tasks/administer-cluster/declare-network-policy/
     - https://kubernetes.io/docs/concepts/services-networking/network-policies/
-    - https://ahmet.im/blog/kubernetes-network-policy/
+    - [x] https://ahmet.im/blog/kubernetes-network-policy/
     
 - [x] SecurityPrimitives::understand
     - [x]https://kubernetes.io/docs/concepts/policy/pod-security-policy/

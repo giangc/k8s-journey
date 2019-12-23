@@ -71,10 +71,11 @@ SecuredPractice::Config TLS for cluster
 - [x] SecuredPractice::Config secured context
     - https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
 
-- [ ] SecuredPractice::Config network policy
-    - https://kubernetes.io/docs/tasks/administer-cluster/declare-network-policy/
+- [x] SecuredPractice::Config network policy
+    - [x] https://kubernetes.io/docs/tasks/administer-cluster/declare-network-policy/
+    - https://kubernetes.io/docs/concepts/services-networking/network-policies/
     - https://ahmet.im/blog/kubernetes-network-policy/
-
+    
 - SecurityPrimitives::understand
     - https://kubernetes.io/docs/concepts/policy/pod-security-policy/
 

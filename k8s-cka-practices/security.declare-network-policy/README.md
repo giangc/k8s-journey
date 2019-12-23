@@ -21,4 +21,8 @@
  ## Practical Note
  - Checking connection with: create busybox pod and running it by cmd; wget --spider -timeout=1 
  - Could not run with local minikube yet.
- 
+
+## Reading
+https://ahmet.im/blog/kubernetes-network-policy/
+ - Network policy feature which allow to control the in and out connection between pods. I.e: 1 way connections or 2 way connections, or rule based.
+ - Old term is access control list

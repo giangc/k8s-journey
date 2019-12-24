@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2019-12-24T06:44:10Z"
+  labels:
+    app: nginx
+  name: nginx
+  namespace: default
+  resourceVersion: "1792"
+  selfLink: /api/v1/namespaces/default/services/nginx
+spec:
+  clusterIP: 10.96.46.145
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: nginx
+  sessionAffinity: None
+  externalTrafficPolicy: Local
+  healthCheckNodePort: 8081
+  type: LoadBalancer
+status:
+  loadBalancer: {}

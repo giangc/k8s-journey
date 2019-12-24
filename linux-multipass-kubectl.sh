@@ -30,6 +30,7 @@ export KUBECONFIG=$KUBECONFIG:kubeconfig3
 kubectl config view
 kubectl config current-context
 kubectl config get-contexts
+kubectl config use-context my-cluster-name 
 
 # Get name via -o jsonpath
 jobpod1=$(kubectl get pods \

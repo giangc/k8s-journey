@@ -88,7 +88,7 @@ SecuredPractice::Config TLS for cluster
 - [x] NetworkingFeature::ingress rules
     - https://kubernetes.io/docs/concepts/services-networking/ingress/
     - https://kubernetes.io/docs/tasks/access-application-cluster/ingress-minikube/
-- [ ] NetworkingFeature::load balancer
+- [x] NetworkingFeature::load balancer
     - https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/ 
 
 - [x] NetworkingFeature::CNI
@@ -119,10 +119,10 @@ Objects:: API primitives
 
 ------ 
 
-- [ ] Scheduller::config with multiple schedulers to run pods
+- [x] Scheduller::config with multiple schedulers to run pods
     - https://kubernetes.io/docs/tasks/administer-cluster/configure-multiple-schedulers/
 
-- [ ] Scheduller::config without scheduler to run pods
+- [x] Scheduller::config without scheduler to run pods
     - https://kubernetes.io/docs/tasks/configure-pod-container/static-pod/
 
 - Scheduller::config with scheduler event to run pods

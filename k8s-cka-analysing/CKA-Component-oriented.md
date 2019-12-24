@@ -9,7 +9,7 @@
     - [Doc- HA Cluster](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/high-availability/)
     - https://kubernetes.io/docs/tasks/administer-cluster/highly-available-master/
 
-- Cluster:: Release binaries based on Cluster
+- [x] Cluster:: Release binaries based on Cluster
     
     - https://kubernetes.io/docs/setup/#prebuilt-binary-release ?? 
 
@@ -82,16 +82,16 @@ SecuredPractice::Config TLS for cluster
 
 ------
 
-- [ ] NetworkingFeature::DNS config
+- [x] NetworkingFeature::DNS config
     - https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/
 
-- [ ] NetworkingFeature::ingress rules
+- [x] NetworkingFeature::ingress rules
     - https://kubernetes.io/docs/concepts/services-networking/ingress/
-
+    - https://kubernetes.io/docs/tasks/access-application-cluster/ingress-minikube/
 - [ ] NetworkingFeature::load balancer
     - https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/ 
 
-- NetworkingFeature::CNI
+- [x] NetworkingFeature::CNI
     - https://www.dasblinkenlichten.com/understanding-cni-container-networking-interface/
     - https://github.com/containernetworking/cni
 
@@ -164,3 +164,4 @@ Objects:: API primitives
 - https://kubernetes.io/docs/tasks/manage-daemon/update-daemon-set/
 - https://kubernetes.io/docs/tasks/manage-daemon/rollback-daemon-set/
 - https://kubernetes.io/docs/tutorials/stateful-application/zookeeper/
+- https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-init-phase/#cmd-phase-addon

@@ -1,5 +1,6 @@
 # CKA-Component-oriented
-/System/Applications/Books.
+
+
 - Cluster:: Set up and design
 
 - Cluster:: Run
@@ -108,6 +109,14 @@ SecuredPractice::Config TLS for cluster
 - [x] Role of DaemonSet
     - https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
     - https://kubernetes.io/docs/tasks/manage-daemon/update-daemon-set/
+
+------ 
+
+- [ ] Pod::Scheduled::how to setup label selector
+    - https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
+- [ ] Pod::Scheduled::resource limits affecting the scheduler
+    - https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/
+- Pod::Networking
 ------ 
 
 - [ ] Object::Know how to scale the application
@@ -150,7 +159,6 @@ Objects:: API primitives
     - https://kubernetes.io/docs/tasks/debug-application-cluster/debug-service/
     - https://kubernetes.io/docs/tasks/debug-application-cluster/debug-application/
 
-
 - Failure::ControllPlane
 
 - Failure::Node
@@ -165,3 +173,6 @@ Objects:: API primitives
 - https://kubernetes.io/docs/tasks/manage-daemon/rollback-daemon-set/
 - https://kubernetes.io/docs/tutorials/stateful-application/zookeeper/
 - https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-init-phase/#cmd-phase-addon
+
+
+(CKA: walidshaari)[https://github.com/walidshaari/Kubernetes-Certified-Administrator]

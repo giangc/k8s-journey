@@ -1,5 +1,5 @@
 # CKA-Component-oriented
-
+/System/Applications/Books.
 - Cluster:: Set up and design
 
 - Cluster:: Run
@@ -95,7 +95,20 @@ SecuredPractice::Config TLS for cluster
     - https://www.dasblinkenlichten.com/understanding-cni-container-networking-interface/
     - https://github.com/containernetworking/cni
 
-------
+------ 
+
+- [x] Scheduller::config with multiple schedulers to run pods
+    - https://kubernetes.io/docs/tasks/administer-cluster/configure-multiple-schedulers/
+
+- [x] Scheduller::config without scheduler to run pods
+    - https://kubernetes.io/docs/tasks/configure-pod-container/static-pod/
+
+- Scheduller::config with scheduler event to run pods
+
+- [x] Role of DaemonSet
+    - https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
+    - https://kubernetes.io/docs/tasks/manage-daemon/update-daemon-set/
+------ 
 
 - [ ] Object::Know how to scale the application
     - https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/#scaling-your-application
@@ -116,19 +129,6 @@ Objects:: API primitives
 -  Deployment::Understand the deployment
 - [ ] Deployment::Update and rollback
     - https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
-
------- 
-
-- [x] Scheduller::config with multiple schedulers to run pods
-    - https://kubernetes.io/docs/tasks/administer-cluster/configure-multiple-schedulers/
-
-- [x] Scheduller::config without scheduler to run pods
-    - https://kubernetes.io/docs/tasks/configure-pod-container/static-pod/
-
-- Scheduller::config with scheduler event to run pods
-
-- [ ] Role of DaemonSet
-    - https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
 
 ------
 

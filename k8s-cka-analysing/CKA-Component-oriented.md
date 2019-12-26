@@ -109,13 +109,17 @@ SecuredPractice::Config TLS for cluster
 - [x] Role of DaemonSet
     - https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
     - https://kubernetes.io/docs/tasks/manage-daemon/update-daemon-set/
-
+    - https://kubernetes.io/docs/tasks/manage-daemon/update-daemon-set/
+    - https://kubernetes.io/docs/tasks/manage-daemon/rollback-daemon-set/
+    
 ------ 
 
-- [ ] Pod::Scheduled::how to setup label selector
+- [x] Pod::Scheduled::how to setup label selector
     - https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
-- [ ] Pod::Scheduled::resource limits affecting the scheduler
+
+- [x] Pod::Scheduled::resource limits affecting the scheduler
     - https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/
+
 - Pod::Networking
 ------ 
 
@@ -129,7 +133,8 @@ SecuredPractice::Config TLS for cluster
 
 
 Objects:: API primitives
-- [ ] Object::Storage
+- [x] Object::Storage
+    - https://kubernetes.io/docs/concepts/storage/persistent-volumes/
 - [ ] Object::Application::assign with persitent storage
 - [ ] Object::Application::Failure
 
@@ -141,13 +146,13 @@ Objects:: API primitives
 
 ------
 
-- [ ] PersistentVolume::
+- [x] Storage::PersistentVolume::
  
-    - https://kubernetes.io/docs/concepts/storage/persistent-volumes/
-    - https://kubernetes.io/docs/tasks/configure-pod-container/configure-volume-storage/
-    - https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes
+    - [x] https://kubernetes.io/docs/concepts/storage/persistent-volumes/
+    - [ ] https://kubernetes.io/docs/tasks/configure-pod-container/configure-volume-storage/
+    - [ ] https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes
 
-- [ ] PersistentVolumeClaim::
+- [ ] Storage::PersistentVolumeClaim::
 
     - https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims
 

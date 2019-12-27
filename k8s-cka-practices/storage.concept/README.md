@@ -1,12 +1,15 @@
 # storage.concept 
 https://kubernetes.io/docs/concepts/storage/persistent-volumes/
+
+https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/
+
  ## General learning process 
  - [x] read();
  - [x] mentalRecall();
  - [x] summaryRecall();
- - [ ] mentalPracticalNote();
- - [ ] readPractice() 
- - [ ] practiceSummary() 
+ - [x] mentalPracticalNote();
+ - [x] readPractice() 
+ - [x] practiceSummary() 
 
  ## Mental Note 
   - Persistent volume is a mechanism for administrator to provision data storage. Claim(Persistent Volume Claim) is a request from k8s objects(pods, namespace, etc.) for data storage. Based on the claim, k8s binds PV to appropriate PVC. Any config variations would be resolved via StorageName.
@@ -18,4 +21,6 @@ https://kubernetes.io/docs/concepts/storage/persistent-volumes/
  
  ## Practical Note
   1. Describe 2 ways of binding volume in K8s?
-  2.
+  2. Describe [Storage Class](.storage-class.md)
+  3. [Config to use Persistent Volume](.config-to-use-pv-and-pvc.md)
+

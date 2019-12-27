@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: task-volume
+  annotations:
+    pv.beta.kubernetes.io/gid: "1234"
+spec:
+  storageClassName: manual
+  capacity: 
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: '/Users/macbook/GitWorkspace/k8s-journey/k8s-cka-practices/storage.config-storage-class
+/tmp'

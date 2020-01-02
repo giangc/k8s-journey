@@ -99,17 +99,17 @@
     - Documentation
   - kubectl explain resource.key
 
-- (CKA: walidshaari)[https://github.com/walidshaari/Kubernetes-Certified-Administrator]
+- [CKA: walidshaari](https://github.com/walidshaari/Kubernetes-Certified-Administrator)
 
-- (CKAD: Small practices)[https://medium.com/bb-tutorials-and-thoughts/practice-enough-with-these-questions-for-the-ckad-exam-2f42d1228552]
+- [CKAD: Small practices](https://medium.com/bb-tutorials-and-thoughts/practice-enough-with-these-questions-for-the-ckad-exam-2f42d1228552)
 
-- (CKAD: dgkanatsios)[https://github.com/dgkanatsios/CKAD-exercises/blob/master/]
+- [CKAD: dgkanatsios](https://github.com/dgkanatsios/CKAD-exercises/blob/master/)
 
-- (CKAD: Practice-Questions)[https://github.com/bbachi/CKAD-Practice-Questions]
+- [CKAD: Practice-Questions](https://github.com/bbachi/CKAD-Practice-Questions)
 
-- [x] (kubernetes-the-hard-way)[https://github.com/kelseyhightower/kubernetes-the-hard-way/]
+- [x] [kubernetes-the-hard-way](https://github.com/kelseyhightower/kubernetes-the-hard-way/)
 
-- (Just another list)[https://docs.google.com/spreadsheets/d/10NltoF_6y3mBwUzQ4bcQLQfCE1BWSgUDcJXy-Qp2JEU/edit#gid=391253787] : Should kinda review the list ...
+- [Just another list](https://docs.google.com/spreadsheets/d/10NltoF_6y3mBwUzQ4bcQLQfCE1BWSgUDcJXy-Qp2JEU/edit#gid=391253787) : Should kinda review the list ...
 
 - http://www.kubernet.io/
 

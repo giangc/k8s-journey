@@ -1,6 +1,5 @@
 # CKA-Component-oriented
 
-
 - Cluster:: Set up and design
 
 - Cluster:: Run

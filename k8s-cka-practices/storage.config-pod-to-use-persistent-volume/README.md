@@ -1,16 +1,15 @@
 # storage.config-pod-to-use-persistent-volume
 https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/
 
-
  ## General learning process 
  - [x] read();
  - [x] mentalRecall();
  - [x] summaryRecall();
- - [ ] mentalPracticalNote();
- - [ ] readPractice() 
+ - [x] mentalPracticalNote();
+ - [x] readPractice() 
  - [ ] practiceSummary() 
  ## Mental Note
-
+ - 
  ## Practical Note
 Steps: 
 - Create persistent volume as a admin. Create a file in that volume path via ssh.

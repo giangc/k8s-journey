@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: redisstorage
+  name: redisstorage
+spec:
+  volumes:
+  - name: redisstorage-volume
+    emptyDir: {}
+  containers:
+  - image: redis
+    name: redisstorage
+    resources: {}
+    volumeMounts: 
+    - name: redisstorage-volume
+      mountPath: /data/redis
+  restartPolicy: Always

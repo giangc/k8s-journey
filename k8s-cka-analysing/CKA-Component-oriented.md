@@ -149,7 +149,7 @@ Objects:: API primitives
 - [x] Storage::PersistentVolume::
  
     - [x] https://kubernetes.io/docs/concepts/storage/persistent-volumes/
-    - [ ] https://kubernetes.io/docs/tasks/configure-pod-container/configure-volume-storage/
+    - [x] https://kubernetes.io/docs/tasks/configure-pod-container/configure-volume-storage/
     - [ ] https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes
 
 - [ ] Storage::PersistentVolumeClaim::

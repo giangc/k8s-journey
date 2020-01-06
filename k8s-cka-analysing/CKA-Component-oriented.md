@@ -1,7 +1,7 @@
 # CKA-Component-oriented
 
 - Cluster:: Set up and design
-
+  - [x]https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
 - Cluster:: Run
 
 - Cluster:: Config high-availability
@@ -10,11 +10,9 @@
     - https://kubernetes.io/docs/tasks/administer-cluster/highly-available-master/
 
 - [x] Cluster:: Release binaries based on Cluster
-    
     - https://kubernetes.io/docs/setup/#prebuilt-binary-release ?? 
 
 - Cluster::Infrastructure:: Provisioning to deploy cluster
-    
     - https://github.com/kelseyhightower/kubernetes-the-hard-way/blob/f9486b081f8f54dd63a891463f0b0e783d084307/docs/01-infrastructure-gcp.md
 
 - Cluster::Infrastructure:: Choose configuration
@@ -135,7 +133,7 @@ Objects:: API primitives
 - [x] Object::Storage
     - https://kubernetes.io/docs/concepts/storage/persistent-volumes/
 - [ ] Object::Application::assign with persitent storage
-- [ ] Object::Application::Failure
+- [x] Object::Application::Failure
 
 ------ 
 
@@ -157,7 +155,7 @@ Objects:: API primitives
 
 ------
 
-- [ ] Failure::Application
+- [x] Failure::Application
     - https://kubernetes.io/docs/tasks/debug-application-cluster/determine-reason-pod-failure/
     - https://kubernetes.io/docs/tasks/debug-application-cluster/debug-application-introspection/
     - https://kubernetes.io/docs/tasks/debug-application-cluster/debug-service/
@@ -165,7 +163,7 @@ Objects:: API primitives
 
 - Failure::ControllPlane
 
-- Failure::Node
+- [x] Failure::Node
     - https://kubernetes.io/docs/tasks/debug-application-cluster/debug-cluster/
 
 - Failure::Networking
@@ -177,6 +175,5 @@ Objects:: API primitives
 - https://kubernetes.io/docs/tasks/manage-daemon/rollback-daemon-set/
 - https://kubernetes.io/docs/tutorials/stateful-application/zookeeper/
 - https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-init-phase/#cmd-phase-addon
-
 
 (CKA: walidshaari)[https://github.com/walidshaari/Kubernetes-Certified-Administrator]

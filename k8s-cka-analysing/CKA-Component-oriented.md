@@ -156,8 +156,8 @@ Objects:: API primitives
 ------
 
 - [x] Failure::Application
-    - https://kubernetes.io/docs/tasks/debug-application-cluster/determine-reason-pod-failure/
-    - https://kubernetes.io/docs/tasks/debug-application-cluster/debug-application-introspection/
+    - [x] https://kubernetes.io/docs/tasks/debug-application-cluster/determine-reason-pod-failure/
+    - [x]https://kubernetes.io/docs/tasks/debug-application-cluster/debug-application-introspection/
     - https://kubernetes.io/docs/tasks/debug-application-cluster/debug-service/
     - https://kubernetes.io/docs/tasks/debug-application-cluster/debug-application/
 

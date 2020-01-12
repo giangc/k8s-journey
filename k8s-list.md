@@ -92,7 +92,7 @@
 
 ## research-online-about-certificate()
 
-- [x] (platformer.com: How I pass CKAs)[https://medium.com/platformer-blog/how-i-passed-the-cka-certified-kubernetes-administrator-exam-8943aa24d71d]
+- [x] [platformer.com: How I pass CKAs](https://medium.com/platformer-blog/how-i-passed-the-cka-certified-kubernetes-administrator-exam-8943aa24d71d)
   - Can access anything under kubernetes.io domain:
     - kubectl cheatsheet
     - Discussion forum

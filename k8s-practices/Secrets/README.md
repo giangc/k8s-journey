@@ -128,4 +128,7 @@ To consume a Secret in a volume in a Pod
   What is 'mode: 511' for? 
   How can I put mode read-only for secret file?
 
-
+## Safe practice
+ - Don't commit secret file into repo
+ - Encrypt secret data at REST
+ - https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/

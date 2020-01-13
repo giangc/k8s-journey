@@ -36,3 +36,13 @@ tar -xvf
 etcdctl --listen-client-urls=http://1.2.3.4:2379 --advertise-client-urls=http://1.2.3.4:2379
 
 sudo cp ca.key kubernetes-key.pem kubernetes.pem /etc/etcd/
+
+etcdctl --cacert="etcd/ca.crt" --key=apiserver-etcd-client.key --cert=apiserver-et
+cd-client.crt endpoint status
+
+etcdctl --cacert="etcd/ca.crt" --key=apiserver-etcd-client.key --cert=apiserver-et
+cd-client.crt endpoint status
+
+etcdctl --cacert="etcd/ca.crt" --key=apiserver-etcd-client.key --cert=apiserver-et
+cd-client.crt get / --prefix --keys-only
+

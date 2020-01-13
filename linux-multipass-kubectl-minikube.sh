@@ -51,6 +51,11 @@ kubectl get pods -l run=my-nginx -o wide
 kubectl create deployment nginx --image=nginx -o yaml --dry-run
 kubectl run --generator=run-pod/v1 security-context-demo --image=busybox --dry-run -o yaml > security-context-demo.yaml
 
+## kubectl patching
+kubectl patch deployment patch-demo --patch "$(cat patch-2.yaml)"
+kubectl patch deployment patch-demo --patch "$(cat patch-3.yaml)"
+kubectl patch deployment patch-demo --type merge --patch "$(cat patch-3.yaml)"
+
 # minikube
 minikube config #show config
 minikube start --cpus 6 # start minikube and start with 6 cpus

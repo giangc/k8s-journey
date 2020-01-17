@@ -1,4 +1,6 @@
-## List of online practices that I went thru for later process of reflection.
+# List of online practices that I went thru for later process of reflection.
+
+- [CURRICULUM LINKS](https://github.com/cncf/curriculum/blob/master/certified_kubernetes_administrator_exam_v1.15.pdf)
 
 ### General tips:
 1. How can I craft the complex K8s component in yaml?
@@ -109,7 +111,7 @@
 
 - [x] [kubernetes-the-hard-way](https://github.com/kelseyhightower/kubernetes-the-hard-way/)
 
-- [Just another list](https://docs.google.com/spreadsheets/d/10NltoF_6y3mBwUzQ4bcQLQfCE1BWSgUDcJXy-Qp2JEU/edit#gid=391253787) : Should kinda review the list ...
+- [Just another list](https://goo.gl/Rywkpd) : Should kinda review the list ...
 
 - http://www.kubernet.io/
 

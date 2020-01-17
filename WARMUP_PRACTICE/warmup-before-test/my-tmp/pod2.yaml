@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod2
+  labels:
+    tier: backend  
+spec:
+  containers:
+  - name: backend-nginx2
+    image: nginx

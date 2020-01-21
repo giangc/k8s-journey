@@ -45,40 +45,80 @@ https://github.com/cncf/curriculum/blob/master/certified_kubernetes_administrato
 
   - **Understand the role of daemonset.**
     - KodeCloud-Answer: Deploy a daemonset
+      - Concept > Workload > Controllers > DaemonSet https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
+      - Search: /en/examples/daemonset
+      https://github.com/kubernetes/website/blob/master/content/en/examples/controllers/daemonset.yaml
 
     - KodeCloud-Answer: View daemonsets
-    
+      - `kubetctl get all `
+      - `kubectl get ds`
     - KodeCloud-Answer: Describe DaemonSet
-    
+      - `kubectl describe ds name1`
     - Use node affinity
+      - topology spread constraint
+      - **Required note practice for comprehension**
+      
+      - use kubectl explain to view the doc: 
+      `kubectl explain ds.spec.template.spec.affinity.nodeAffinity --recursive `
+    
+    - Rolling Update DaemonSet
+      - Tasks > Manage Daemon > update daemonset 
+      https://kubernetes.io/docs/tasks/manage-daemon/update-daemon-set/
+    - Rollback DaemonSet
+      - - Tasks > Manage Daemon > rollback daemonset 
 
   - **Use label and selector to schedule pods.**
     - Label and selector for Deployment to pod
+      - Github doc search: /en/deployment
+
     - Label and selector for ReplicaSet to pod
+      - Github doc search: /en/replicaset
+
     - Label and selector for Node to pod
+      - Github doc search: /en/pod-specific-node
+      `spec.nodeName: node01`
 
   - **Understand how resource limit can affect Pod scheduling**
     - Setup resource request and limit for Pod
-    
+      - Github doc search: /en/cpu-request-limits
   - **Understand how to run multiple schedulers and how to config pod to use them**
     - **Unsearchable** Setup 3 schedulers to run 3 different pods
     - KodeCloud-Answer: Deploy a multiple scheduler
-    
+
     - View scheduler
-    - View scheduler in kube-system
+
     - Use custom scheduler
+
+    - View scheduler in kube-system
+      - `kubectl logs kube-scheduler -n kube-system`
+      - `kubectl describe kube-scheduler -n kube-system`
+
     - View scheduler logs
+      - `kubectl get events`
 
   - **Display schedule events**
-    - Get events
+    - Get events `kubectl get events`
 
   - **Know how to config Kubernetes Scheduler.**
     - Setup taint for node
+      - `kubectl taint node node01 frontend-node:dev1:NoSchedule`
+      - references > kubectl > #kubectl taint 
+    
     - Get taint status via `describe node | grep Taint`
+    
     - Setup toleration for pod
+      - Github doc search: /en/toleration
+
     - Get toleration status
+      - `kubectl describe pod`
     - Setup label for node
+      `kubectl label node key1:value1`
+
     - Setup node affinity for node
+      pod.spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.nodeSelectorTerms
+      - `pod.spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.nodeSelectorTerms.matchExpressions.operator` : Key relationship to set of values: In NotIn, Exists, DoesNotExist. 
+
+    - concept > configurations > taint and toleration 
 
 ## Logging/Monitoring
   - **Understand how to monitor all cluster components**
@@ -96,13 +136,13 @@ https://github.com/cncf/curriculum/blob/master/certified_kubernetes_administrato
 
 ## Application Lifecycle Management
   - **Understand Deployments and how to perform rolling update and rollbacks**
-    - Create frontend backend deployment
-    - Expose frontend backend deployment
-    - Rolling update front end backend deployment
-    - Rollback frontend backend deployment
+    - Rolling update deployment
+    - Rollback deployment
     - Get deployment
     - Rollout Status deployment
     - Rollout history deployment
+    
+    - Concept > Workload > Controllers > Deployments
 
   - **Know various ways to configure applications.**
     - **Unsearchable** KodeCloud-Answer: Run command and argument
@@ -115,14 +155,27 @@ https://github.com/cncf/curriculum/blob/master/certified_kubernetes_administrato
 
   - **Know how to scale applications**
     - Scale up deployment
+      - `kubectl scale deployment backend-deployment --replicas=3 `
     - Scale down deployment
+      - `kubectl scale deployment backend-deployment --replicas=1`
     - Autoscale deployment
+      - `kubectl autoscale deployment backend-deployment --max=5 --min 2 --cpu-percent=80`
+    - Concept > Worloads > Controllers > Deployment
+    - https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#scaling-a-deployment
 
   - **Understand the primitive necessary to create a self-healing application**
     - Create self-healing deployment
+      - `deployment.spec.template.spec.restartPolicy` default to Always
+      - `kubectl explain deployment.spec.template.spec.restartPolicy`
     - Create self-healing replicaset
+      - `deployment.spec.template.spec.restartPolicy` default to Always
+      - `kubectl explain replicaset.spec.template.spec.restartPolicy`
+    
     - Create self-healing DaemonSet
+      - `kubectl explain daemonset.spec.template.spec.restartPolicy`
 
+    https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#restart-policy
+    
 ## Cluster Maintenance
   - **Understand Kubernetes cluster upgrade process**
     - KodeCloud-Answer: upgrade with kubeadm
@@ -135,14 +188,13 @@ https://github.com/cncf/curriculum/blob/master/certified_kubernetes_administrato
     - **Unsearchable** KodeCloud-Answer: upgrade the hard way
 
   - **Facilitate operating system upgrades**
-    - Drain all pods in a node:
-      - `kubectl drain`
 
-    - Cordon node: to make it unschedulable
-      - `kubectl cordon`
-
-    - Uncordon node: to make it schedulable again
-      - `kubectl uncordon`
+    **Require system to test**
+    - https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/
+    
+    - Drain all pods in a node `kubectl drain`
+    - Cordon node: to make it unschedulable `kubectl cordon`
+    - Uncordon node: to make it schedulable again `kubectl uncordon`
 
   - **Implement backup and restore methodologies**
    
@@ -159,6 +211,7 @@ https://github.com/cncf/curriculum/blob/master/certified_kubernetes_administrato
 ## Security
   - **Understand Kubernetes security primitives**
     - Create node namespace
+      - kubectl get api-resources
     - Create cluster-wide role and rolebinding
     - Assign cluster-wide role
     - Verify role's actions with `can-i`
@@ -171,6 +224,8 @@ https://github.com/cncf/curriculum/blob/master/certified_kubernetes_administrato
       - KodeCloud-Answer: Authenticate user with password
       - KodeCloud-Answer: Authenticate user with user token
       - Create ServiceAccount
+        - `kubectl create serviceaccount backend-system --dry-run -o yaml > sa1.yaml`
+        
       - KodeCloud-Answer(0600-Security): RBAC: Create role, Get rolebinding, describe role
       - KodeCloud-Answer: Setup ABAC
       

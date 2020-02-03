@@ -81,13 +81,11 @@
 - [Kubectl-docs](https://kubectl.docs.kubernetes.io/) : Lots of good info on how to manage k8s config by cmd and how to manage them by structure.
 
 - [x] [MS - How kube-scheduler work | length: 8 mins](https://www.youtube.com/watch?v=rDCWxkvPlAw)
-
 - [x] [VMware - Grokking kube scheduler | length: 1h 24 mins](https://www.youtube.com/watch?v=XxVHNWoZO_c&t=265s)
-
 - [Setup and config kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/#pod-network)
-
 - [x] [Great example on kubeadm in local multipass](https://github.com/arashkaffamanesh/kubeadm-multipass)
 - [ ] [Vmware: Kubectl explain](https://blog.heptio.com/kubectl-explain-heptioprotip-ee883992a243)
+
 ## Public tutorial images
 - - name: redis  image: redis:4.0.10
 - - name: nginx  image: nginx

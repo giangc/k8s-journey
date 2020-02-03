@@ -19,7 +19,7 @@ microk8s.status
 multipass list
 multipass shell <instance_name>
 multipass launch --name funny-cluster
-
+multipass launch --name master01 --cpus 2 --disk 8G
 tar -xvf
 # kubectl
 # Config

@@ -2,7 +2,7 @@
 
 ## todo list 1
 
-- [x] [research basic actions(verb)](#research-basic-actions(verb))
+- [x] [research basic actions(verb)](#research-basic-actionsverb)
 - [x] [research basic components](#research-basic-components)
 - [x] [basic combination](k8s-analysis1-basic-combination.md)
 

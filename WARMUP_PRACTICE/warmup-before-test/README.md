@@ -200,7 +200,7 @@ https://github.com/cncf/curriculum/blob/master/certified_kubernetes_administrato
     - KodeCloud-Answer: etcd explore
     - KodeCloud-Answer: etcd HA cluster
 
-  - [x] **Understand the Kubernetes cluster architecture**
+  - [x] **Under   stand the Kubernetes cluster architecture**
     - KodeCloud-Answer: kube-apiserver: how to view manifest file
     - KodeCloud-Answer: kube-apiserver: how to view options with ps aux
     - KodeCloud-Answer: kube-controlmanager: how to view manifest file
@@ -420,11 +420,14 @@ https://github.com/cncf/curriculum/blob/master/certified_kubernetes_administrato
 ## Installation, Configuration and Validation
   - **Design a kubernetes cluster**
     - HA Master Nodes(3), 1 LB Master node, worker nodes
+  
   - **Install kubernetes master and nodes**
     - Master nodes: install: kube-controller, kube-controlmanager, kube-scheduler, kubelet, kube-apiserver, kubeproxy
     - Worker nodes: install: kubelet and kubeproxy
+  
   - **Configure secure cluster communication**
     - Boostrap TLS
+  
   - **Configure High Availability cluster**
     - Setup HA master nodes
       - ```
@@ -436,15 +439,20 @@ https://github.com/cncf/curriculum/blob/master/certified_kubernetes_administrato
         ```
         - HA Cluster with kubeadm:
           - getting-started/bootstraping cluster with kubeadm/Create HA clusters with kubeadm
+
   - **Know where to get the Kubernetes release binaries**
     - https://github.com/kubernetes/kubernetes/releases/
+
   - **Provision underlying infrastructure to deploy a Kubernetes cluster**
     - KodeCloud-Answer: Installing master node: 1 LB network, 2 Master nodes, 1 ETCD cluster
+
   - **Choose a network solution**
     - Weavework
+
   - **Choose your Kubernetes infrastructure configuration**
+
   - **Run end to end tests on your cluster**
-    - [x] Manual Test:
+    - [x] Manual Test
       - [x] Get nodes
       - [x] Get pods
         - get pods -n kube-system
@@ -453,11 +461,14 @@ https://github.com/cncf/curriculum/blob/master/certified_kubernetes_administrato
         - service kube-controller-manager status
     - Run conformance test
     - Run test
+
   - **Analyse end to end test result**
     - View test result
+
   - **Run node end to end test**
     - Run conformance test
     - Run test
+
   - **Install and use kubeadm to install, configure, and manage Kubernetes cluster.**
     - kubeadm init
     - kubeadm join

@@ -20,6 +20,7 @@ multipass list
 multipass shell <instance_name>
 multipass launch --name funny-cluster
 multipass launch --name master01 --cpus 2 --disk 8G
+multipass launch --name worker01 --cpus 2 --disk 5G
 tar -xvf
 # kubectl
 # Config
@@ -59,3 +60,5 @@ kubectl patch deployment patch-demo --type merge --patch "$(cat patch-3.yaml)"
 # minikube
 minikube config #show config
 minikube start --cpus 6 # start minikube and start with 6 cpus
+
+kubeadm token create --ttl=0 --print-join-command

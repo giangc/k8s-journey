@@ -6,7 +6,7 @@ lscpu --online --parse=Core,Socket | grep --invert-match '^#' | sort --unique | 
 
 # spec2
 grep ^cpu\\scores /proc/cpuinfo | uniq |  awk '{print $4}' 
-sudo snap install microk8s --classic
+sudo snap install microk8s --classic    
 
 ## Basic:
 # Assigning and looping

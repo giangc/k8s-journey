@@ -1,10 +1,10 @@
-# RunningExam.Research
+# RESEARCH ONLINE
+> Research online about CKA material.
 
-## todo list 1
-
+## list of contents
 - [x] [research basic actions(verb)](#research-basic-actionsverb)
 - [x] [research basic components](#research-basic-components)
-- [x] [basic combination](k8s-analysis1-basic-combination.md)
+- [x] [basic combination](analysis-basic-combination.md)
 
 --------
  
@@ -58,7 +58,6 @@
     - Hit
     - Declare
     - Connect
-
 
 ### research basic components
 - https://medium.com/bb-tutorials-and-thoughts/practice-enough-with-these-questions-for-the-ckad-exam-2f42d1228552

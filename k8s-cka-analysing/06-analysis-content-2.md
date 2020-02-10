@@ -230,7 +230,6 @@ https://github.com/cncf/curriculum/blob/master/certified_kubernetes_administrato
     - KodeCloud-Answer: ClusterRole and ClusterRoleBinding
 
   - **Know how to configure authentication and authorisation**
-    - **Unsearchable**
       - KodeCloud-Answer: Authenticate user with password
       - KodeCloud-Answer: Authenticate user with user token
       - [x] Create ServiceAccount
@@ -259,12 +258,13 @@ https://github.com/cncf/curriculum/blob/master/certified_kubernetes_administrato
     - Use private repo image:
       - `docker login private-regis.io`
     - Use environment variable with encoded text
-      - ```
+      ```
         kubecte create secret docker-registry regcred \
         --docker-server=private.io \
         --docker-username=user1 \
         --docker-password=paswrd123 \
-        ```
+      ```
+
     - https://kubernetes.io/docs/concepts/containers/images/#using-a-private-registry
   - [x] **Define security context**
     - [x] Understand security context is a field in Pod spec

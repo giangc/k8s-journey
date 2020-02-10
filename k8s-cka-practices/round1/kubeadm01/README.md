@@ -11,9 +11,11 @@
   7. Tear down?
 
 1. how to check the token that are used for kubeadm join network?
-  * Node authorizer: kubeadm join --token
-  * create new token: `kubeadm create token --ttl=0 --print-join-command` 
-  * Search pattern: kubeadm/create-cluster-kubeadm/ Search for token create
+  * Node authorizer: 
+    `kubeadm join --token`
+  * create new token: 
+    `kubeadm create token --ttl=0 --print-join-command` 
+  * Search pattern: 
+    kubeadm/create-cluster-kubeadm/ Search for token create
+
 - [Joe Beda - Kubeadm intro](https://www.youtube.com/watch?v=2Yyc2R8yDRo)
-
-

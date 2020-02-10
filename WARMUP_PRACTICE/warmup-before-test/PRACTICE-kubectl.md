@@ -1,26 +1,26 @@
 # PRACTICES
 BASIC KUBECTL
-1. Run deployment - [x]
+1. Run deployment
 2. Scale deployment 
-3. dry-run -o yaml deployment - [x]
+3. dry-run -o yaml deployment
 kubectl run nginx --image=nginx --restart=Never
 --dry-run -o yaml > pod.yaml
-4. run with client certificate, pem, etc. with kubectl options - [x]
+4. run with client certificate, pem, etc. with kubectl options
   - 
-5. get all - [x]
+5. get all
   - get pods with label
 
-6. watch - [x]
-7. describe - [x]
-8. explain -> kind of tldr docs - [x]
-9. apply -f - [x]
-10. create -f - [x]
-11. delete - [x]
-12. --namespace -n - [x]
+6. watch
+7. describe
+8. explain -> kind of tldr docs
+9. apply -f
+10. create -f
+11. delete
+12. --namespace -n
 13. exec -it
 14. view context
 15. set context
-16. set kubeconfig - [x]
+16. set kubeconfig
   - https://kubernetes.io/docs/reference/kubectl/kubectl/ kubectl config
   - kubectl config set-context
   - kubectl config set-cluster

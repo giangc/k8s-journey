@@ -1,0 +1,4 @@
+- Round up cka practice round 1
+- Defines round 2
+- Recover kubectl practice.
+- Move cka list to analysis -> k8s-cka-analysing/06-analysis-content-2.md

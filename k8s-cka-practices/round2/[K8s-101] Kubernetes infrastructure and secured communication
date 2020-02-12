@@ -1,0 +1,22 @@
+[K8s-101] Kubernetes infrastructure and secured communication
+In short, every communication between k8s components are secured with public key infrastructure(PKI)
+
+How is PKI managed in Kubernetes?
+Every components in K8s requires to have pair of keys in order to communicate with each other. This will split into: 
+
+Server/Master side: 
+Kube-apiserver
+ kubelet
+kubeproxy
+
+Ectd-server:
+etcd.
+
+Client side: 
+kubectl
+kube-scheduler,
+kube-controllermanager
+kubelet
+kube-proxy
+
+Kuberentes CA: It requires to have 1 trusted, unique CA to facilitate the connection: ca.crt, ca.key

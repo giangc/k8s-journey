@@ -1,0 +1,19 @@
+[K8s-101] Simple network communication. NetworkPolicy in simplicity
+
+1. Networking communication, ingress/ergress.
+
+Normal internet application architecture includes following components:
+ - User client
+ - Web UI
+ - Server backend
+ - DB
+ 
+ Those components requires to be connected. The connection would be: 
+ - User Client --> Web UI --> Server backend --> DB
+ - User Client <-- Web UI <-- Server backend <-- DB
+
+ Above illustration could be deduced into: incoming/outcomming traffic, equivalent to ingress/ergress
+
+2. Needs for policy
+ - We don't want Web UI connect to DB directly, in vice versa. We need restriction We know that as
+  the web grows, the restriction is growing with the web. We use NetworkPolicy to create such restriction in k8s

@@ -1,0 +1,113 @@
+
+`kubectl config --kubeconfig=/root/my-kube-config use-context research`
+
+kubectl auth can-i list pods -n default as dev-user
+
+# 
+cat <<EOF >rolebinding.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+# This role binding allows "jane" to read pods in the "default" namespace.
+kind: RoleBinding
+metadata:
+  name: binding1
+  namespace: default
+subjects:
+- kind: User
+  name: dev-user
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role
+  name: pod-manager
+  apiGroup: rbac.authorization.k8s.io
+  EOF
+
+cat <<EOF >role-pod.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: default
+  name: pod-manager
+rules:
+- apiGroups: [""]
+  resources: ["pods"]
+  verbs: ["create", "delete", "list"]
+  EOF
+The dev-user is trying to get details about the dark-blue-app pod in the blue namespace.
+We have created the required roles and rolebindings, but something seems to be wrong.
+
+  - kubectl create role blue-pod-reader --verb=get --verb=list --resource=pods --namespace=blue
+  
+  - kubectl create role blue-deployment --verb=create --verb=list --resource=deployments --namespace=blue\
+   --dry-run -o yaml > deployment.yaml
+  
+  - kubectl create rolebinding blue-deployment-binding --role=blue-deployment --user=dev-user --namespace=blue
+
+  kubectl auth can-i get,list pods --namespace=blue --as=dev-user
+  kubectl auth can-i create deployments --namespace=blue --as=dev-user
+  k get roles --namespace=blue
+
+ kubectl get clusterrolebindings --no-headers | wc -l
+ kubectl get clusterroles --no-headers | wc -l
+ k describe clusterrole cluster-admin
+ kubectl describe clusterrolebinding cluster-admin
+A new user michelle joined the team.
+ She will be focusing on the nodes in the cluster.
+  Create the required ClusterRoles and ClusterRoleBindings so she gets access to the nodes.
+
+ kubectl create clusterrole node-reader --verb=get,list --resource=nodes
+ kubectl create clusterrolebinding node-reader-cluster-binding --clusterrole=node-reader --user=michelle
+
+kubectl auth can-i get nodes --as=michelle
+
+michelle'
+ Create the required ClusterRoles and ClusterRoleBindings to allow her access to Storage.
+
+  kubectl create clusterrole storage-admin --verb=get,list --resource=storageclasses,persistentvolumes
+  kubectl create clusterrolebinding michelle-storage-admin --clusterrole=storage-admin --user=michelle
+  kubectl auth can-i get nodes --as=michelle
+  kubectl explain storageclasses --recursive
+  
+  kubectl auth can-i get storageclasses --as=michelle
+  kubectl auth can-i get persistentvolumes --as=michelle
+
+  kubectl create secret docker-registry private-reg-cred /
+  --docker-username=dock_user /
+  --docker-password=dock_password /
+  --docker-server=myprivateregistry.com:5000 /
+  --docker-email=dock_user@myprivateregistry.com/
+
+  kubectl exec ubuntu-sleeper whoami
+  kubectl exec my-pod -- ls
+  kubectl exec ubuntu-sleeper -- date -s '19 APR 2012 11:14:00'
+
+--- 
+#Network Policy
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:  name: internal-policy
+  namespace: default
+spec:
+  podSelector:
+    matchLabels:
+      name: internal
+  policyTypes:
+  - Egress
+  - Ingress
+  ingress:
+    - {}
+  egress:
+  - to:
+    - podSelector:
+        matchLabels:
+          name: mysql
+    ports:
+    - protocol: TCP
+      port: 3306
+
+  - to:
+    - podSelector:
+        matchLabels:
+          name: payroll
+    ports:
+    - protocol: TCP
+      port: 8080

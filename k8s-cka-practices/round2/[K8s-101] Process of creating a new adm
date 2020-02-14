@@ -1,0 +1,19 @@
+[K8s-101] Process of creating a new admin account using PKI
+
+### Important
+ - Store CA and CAKey in secured server
+ - Use Certificates APIs
+
+### Process of creating admin accounts 
+
+1st admin: 
+ 1. Generate key
+ 2. Generate certificate signing request
+ 3. Sign certificate signing request with CA and CAKey
+
+2nd admin:
+ 1. Generate key
+ 2. Generate certificate signing request
+ 3. Send to 1st admin to get signed certificate
+ 4. 1st admin review and sign certificate signing request with CA and CAKey
+ 5. 1st admin send back signed certificate to 2nd admin

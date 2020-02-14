@@ -1,0 +1,6 @@
+[K8s-101] Certificate APIS: CertificateSigningRequest object
+
+### Via kubectl 
+ - kubectl certificate approve 
+ - kubectl certificate deny
+ - kubectl get csr 

@@ -31,6 +31,7 @@ kubectl run nginx --image=nginx --restart=Never
 20. set 
 
 - Review all api resources: `kubectl api-resources`
+kubectl api-resources | grep storage
 - Review all api resources that are namespace-able: `kubectl api-resources --namespaced=true`
 - Inspect auth: `kubectl auth can-i create pods`
 - Update using patch: `kubectl patch deployment patch-demo --type merge --patch "$(cat patch-3.yaml)"`
@@ -46,3 +47,9 @@ kubectl run nginx --image=nginx --restart=Never
 
 - kubectl run generator under /conventions/generators 
 https://kubernetes.io/docs/reference/kubectl/conventions/#generators
+
+kubectl exec -it pod-ubuntu -- /bin/bash
+
+kubectl create secret generic db-secret --from-literal=DB_Host=sql01 --from-literal=DB_User=root --from-literal=DB_Password=password123
+
+- [x] [Need practice some jsonpath query](https://kodekloud.com/courses/certified-kubernetes-administrator-with-practice-tests-labs/lectures/12038783)

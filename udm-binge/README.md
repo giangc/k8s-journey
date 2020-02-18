@@ -1,6 +1,3 @@
-# Random stuff
- ON EPS: 71. APPLICATION COMMANDS
-
 ## Questions
 1. Scheduder schedules pod on node, using taint and toleration.. Consider scenario following, in what context, I as an admin create those pods? Context means an admin could be on his PC, could be ssh to vps, etc.
 

@@ -62,3 +62,4 @@ minikube config #show config
 minikube start --cpus 6 # start minikube and start with 6 cpus
 
 kubeadm token create --ttl=0 --print-join-command
+kubeadm token list

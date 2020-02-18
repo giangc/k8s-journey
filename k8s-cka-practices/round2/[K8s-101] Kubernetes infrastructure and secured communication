@@ -8,14 +8,14 @@ Server/Master side:
 Kube-apiserver
  kubelet
 kubeproxy
+kubectl
+kube-scheduler,
+kube-controllermanager
 
 Ectd-server:
 etcd.
 
 Client side: 
-kubectl
-kube-scheduler,
-kube-controllermanager
 kubelet
 kube-proxy
 

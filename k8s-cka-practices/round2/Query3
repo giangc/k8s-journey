@@ -1,0 +1,96 @@
+# NETWORKING
+* Track of used networking devices:
+ - switching
+ - router
+ - router gateway
+ - DNS: hosts table: /etc/hosts
+
+1. Connect to a private network via switching
+- ip link
+- ip addr add 192.168.1.10/24 dev etho0
+- ip addr add 192.168.2.10/24 dev etho0
+
+2. Connect 2 private neworks of switching via router
+- route
+- ip route add 192.168.2.0/24 via 192.168.1.1# route gateway
+
+3. Establish a network which contains
+- 3 computers ABC: B is a router
+- A -> B via Switch AB, B -> C via Switch BC
+such that:
+ A will be able to receives info from C
+  * route # check routing table
+  * route the C switching address to B gateway of A
+  * change the value of ipforward from 0 to 1 
+  * cat /proc/sys/net/ipv4/ip_forward 
+  * echo 1 > /proc/sys/net/ipv4/ip_forward 
+  * change content on /etc/systctl.conf : ip_forward = 1
+
+ C will be able to receives info from A
+  * route # check routing table
+  * # route the A switching address to B gateway of C
+
+4. Connect router(private network) to internet network
+ - ip route add 0.0.0.0 via 192.168.2.1
+ - ip route add default via 192.168.2.1
+
+5. DNS
+General stuff
+ * 192.168.1.2 db
+ * ping db
+ - namespace 
+ - namespace process
+ - nslookup
+ - dig
+ - CNAME: name to name mapping
+ Change host name mapping table
+   - /etc/resolv.conf  # for nameserver
+   - /etc/hosts
+
+Setup DNS Server using CoreDNS
+
+netstat -nplt
+netstat -anp | grep etcd	
+ip link 
+ip route show default
+ip link show ens3
+
+Correct! That's because 2379 is the port of ETCD 
+to which all control plane components connect
+ to. 2380 is only for etcd peer-to-peer
+  connectivity. When you have multiple 
+	master nodes. In this case we don't.
+
+---- 
+
+CNI
+- cni config dir
+- cni bin dir
+ls /etc/cni/net.d/
+ls /opt/cni/bin
+ps -aux | grep kubelet
+cat /etc/cni/net.d/10-weave.conf
+What binary executable file will be run
+ by kubelet after a container 
+ and its associated namespace are created.
+ --> "type": "weave-net"
+
+6: weave: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1376 qdisc noqueue state UP mode DEFAULT group default qlen 1000
+    link/ether ce:13:79:1a:ed:6c brd ff:ff:ff:ff:ff:ff
+
+Q: What is the POD IP address range configured by weave?
+A: Run the command 'ip addr show weave'
+kubectl run nginx --image=nginx --restart=Never --dry-run -o yaml > pod.yaml
+
+Q: What is the range of IP addresses configured for PODs on this cluster?
+A: kubectl logs weave-net-jl4s4 weave -n kube-system
+
+Q: What is the IP Range configured for the services within the cluster?
+A: ps -aux | grep kube-api --> --service-cluster-ip-range=10.96.0.0/12
+
+Q: What is the responsibility for kube-proxy? 
+A: Everytime a service is created,
+ kubeproxy create forwarding rules for each service
+
+Q: What type of proxy is the kube-proxy configured to use?
+A: kubectl logs kube-proxy-bff4z -n kube-system

@@ -9,6 +9,15 @@
 
 - **Know how to config authentication and authorisation**
 - **Know how to config network policy**
+ - Network Policy
 - **Create and manage TLS certificate for cluster management**
+ - Generate keys
+ - Certifcate signing request: manual and kubectl
+ - Sign certificate
 - **Defines context of security**
+ - Security context in pod and container
+ - Create security context
+
 - **Secure persistent key value store**
+ - Use Secret within pod
+ 

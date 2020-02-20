@@ -13,13 +13,13 @@
 ### PROVISIONING PKI FOR K8S IMPLEMENTATION
 1. Create CA Certificate
 - `openssl genrsa -out ca.key 2048`
-- `openssl req -new -key ca.key -subj “/CN=KUBERNETES-CA" -out ca.csr`
+- `openssl req -new -key ca.key -subj "/CN=KUBERNETES-CA" -out ca.csr`
 - `openssl x509 -req -in ca.csr -signkey ca.key -out ca.crt # Self sign since it’s CA`
 
 2. Create components Certificate and use CA certificate to sign them
     1. Create admin pairs
         - `openssl genrsa -out admin.key 2048`
-        - `openssl req -new -key admin.key -subj “CN=kube-admin/O=system:masters" -out admin.csr`
+        - `openssl req -new -key admin.key -subj "CN=kube-admin/O=system:masters" -out admin.csr`
         - `openssl x509 -req -in admin.csr -CA ca.crt -CAKey ca.key -out admin.crt #`
         - **Search how to generate certifcate** Github: > openssl > 6. Generate the server certificate using the ca.key, ca.crt and server.csr
 

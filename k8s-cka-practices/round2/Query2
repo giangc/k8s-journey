@@ -1,4 +1,3 @@
-
 `kubectl config --kubeconfig=/root/my-kube-config use-context research`
 
 kubectl auth can-i list pods -n default as dev-user

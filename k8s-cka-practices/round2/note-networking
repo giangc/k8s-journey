@@ -1,0 +1,8 @@
+- Network range:
+ - ip addr 
+ - ip addr ens3
+ - ipalloc-range 
+ - kube-proxy
+ - type of proxy
+ - type of proxy iptables Proxier 
+

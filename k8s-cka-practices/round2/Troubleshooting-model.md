@@ -7,7 +7,14 @@
 - Validate node
 
 # Troubleshooting control plane
+ - [K8s-101] Troubleshooting control plane
 
 # Troubleshooting networking
 
 # Troubleshooting worker node
+ - journalctl -u kubelet -f 
+ - systemctl status kubelet
+ - systemctl restart kubelet
+ - /var/lib/kubelet
+ - /etc/kubernetes/manifest/kubelet
+

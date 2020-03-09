@@ -1,0 +1,14 @@
+1. What is control plane?
+
+2. What kind of problems related to control plane?
+ - Deployment could not be scaled: pods are not available
+    -> Problem with kube-controller-manager-master
+ - Pod is not created
+    -> Problem with kube-scheduler
+
+3. What is the troubleshooting thinking/approach?
+ - Check if the `-n kube-system` is ok.
+ - If any pods in `-n kube-system` is Crashed. Check the pod problem using: 
+   - kubectl describe pod -n kube-system
+   - kubectl logs kube-scheduler -n kube-system
+

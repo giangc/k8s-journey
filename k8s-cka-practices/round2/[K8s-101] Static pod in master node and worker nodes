@@ -1,0 +1,16 @@
+* Static pods is generally stored in default namespace. When a static pods is created, it can be checked via 
+`kubectl get pods`. Static pods are usually named with postfix of node name. E.g
+   * static-pod1-node01
+   * static-pod1-master01
+
+1. Create a static pod in master node
+* Create a pod config yaml file, usually generated via `kubectl run` --> `kubectl run static-pod --generator=run-pod/v1 \
+--image=nginx --dry-run -o yaml > static-pod.yaml`
+* Copy config file into /etc/kubernetes/manifests --> `sudo cp static-pod /etc/kubernetes/manifests`
+  
+2. Create a static pod in worker node
+Static pod in worker node is a bit more complicated, when we need to check staticPodPath in kubelet config file
+* ssh to worker node
+* To check static pod path, go to `/var/lib/kubelet`. Config file should be around that path
+* Go to the config file, search for `--pod-manifest-path`. Edit to the new path or keep it there are ok
+* Copy config file into that path

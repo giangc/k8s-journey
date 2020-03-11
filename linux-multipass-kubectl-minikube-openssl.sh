@@ -67,6 +67,8 @@ jobpod1=$(kubectl get pods \
 --output=jsonpath='{.items[*].metadata.name}')
 
 kubectl get pods -l run=my-nginx -o wide
+kubectl create secret tls nginxsecret --key nginx.key --cert nginx.crt
+k run --generator=run-pod/v1 test-nslookup5 --image=busybox:1.28 --rm -ti -- nslookup my-nginx > output.txt
 
 # KUBERNETES_SERVICE_HOST=10.0.0.1
 # KUBERNETES_SERVICE_PORT=443
@@ -96,9 +98,15 @@ kubeadm token create --ttl=0 --print-join-command
 kubeadm token list
 
 # ---------------------
-# openssl 
+# sl 
 
 openssl genrsa -out ca.key 2048 # generate certificate
 openssl req -new -key ca.key -subj "/CN=KUBERNETES-CA" -out ca.csr # new signing request
 openssl x509 -req -in ca.csr -signkey ca.key -out ca.crt # Self sign since it’s CA
 openssl x509 -in /var/dir/some_key.crt -text # describe certificate
+
+openssl genrsa -out nginx.key 2048 # generate certificate
+openssl req -in nginx.key -out nginx.crt -subj "/CN=my-nginx/O=my-nginx"
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout nginx.key -out nginx.crt -subj "/CN=my-nginx/O=my-nginx"
+crt=$(cat nginx.crt | base64)
+key=$(cat nginx.key | base64)

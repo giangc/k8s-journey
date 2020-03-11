@@ -1,0 +1,5 @@
+After a service is exposed from a pod, or pod from deployment etc., name of the exposed service is automatically registered in DNS table. That domain name is accessible for component inside the k8s cluster.
+
+Also, Service is a clusterwide component
+
+kubectl run testpod1 --image=busybox:1.28 -it --rm -- nslookup service-name

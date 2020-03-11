@@ -10,7 +10,8 @@
  - [K8s-101] Troubleshooting control plane
 
 # Troubleshooting networking
-
+ - [file](Troubleshoot-networking.md)
+ 
 # Troubleshooting worker node
  - journalctl -u kubelet -f 
  - systemctl status kubelet

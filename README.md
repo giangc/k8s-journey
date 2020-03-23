@@ -6,3 +6,5 @@ My little notes on learning docker and kubernetes.
 - [Perform CKA Planning](WARMUP_PRACTICE/warmup-before-test/README.md)
 
 > *"Memory is mother of learning"*
+
+![alt text](CKA-giang-nguyen.png)

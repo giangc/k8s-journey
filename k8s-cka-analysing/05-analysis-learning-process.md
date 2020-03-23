@@ -3,6 +3,7 @@
 **Prerequisite** CKA udemy course from KodeCloud
 
 - [x] List down curriculum
+
 **Iterative task:**
 - [x] List down the tldr tasks from easy to hard
 - [x] List down the *necessary* kodecloud tasks

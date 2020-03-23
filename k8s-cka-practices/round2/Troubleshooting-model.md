@@ -18,4 +18,3 @@
  - systemctl restart kubelet
  - /var/lib/kubelet
  - /etc/kubernetes/manifest/kubelet
-

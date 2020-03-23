@@ -330,12 +330,12 @@ https://github.com/cncf/curriculum/blob/master/certified_kubernetes_administrato
     - Know where to look and change kube-system static pods
     - Check node status
     - KodeCloud-Answer: Check controlplane services
-      - `service kube-apiserver status`
-      - `service kube-controller-manager status`
-      - `service kube-scheduler status`
-      - `service kubelet status`
-      - `service kube-proxy status`
-      - `sudo journalctl -u kube-apiserver`
+      - `service status kube-apiserver`
+      - `service status kube-controller-manager`
+      - `service status kube-scheduler`
+      - `service status kubelet`
+      - `service status kube-proxy`
+      - `sudo journalctl -u kube-apiserver -f`
 
   - **Troubleshoot worker node failure**
     - Troubleshoot config in kubelet(check kodecloud)
@@ -344,8 +344,8 @@ https://github.com/cncf/curriculum/blob/master/certified_kubernetes_administrato
     - KodeCloud-Answer: Describe node failure
       - `top`
       - `df -h`
-      - `service kubelet status`
-      - `sudo journalctl -u kubelet`
+      - `service status kubelet`
+      - `sudo journalctl -u kubelet -f`
     - KodeCloud-Answer: Check certificates
       - KodeCloud-Answer: `openssl x509 -in /var/lib/kubelet/worker-1.crt -text`
 
@@ -362,7 +362,7 @@ https://github.com/cncf/curriculum/blob/master/certified_kubernetes_administrato
       - ip route add
       - cat /proc/sys/net/ipv4/ip_forward
       - arp
-      - netstat -plnt
+      - netstat -plnt | grep 8235
 
   - **Understand the networking configuration on the cluster node**
     - Setup calico

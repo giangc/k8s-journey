@@ -11,7 +11,7 @@ https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-vo
  ## Mental Note
  - 
  ## Practical Note
-Steps: 
+Steps:
 - Create persistent volume as a admin. Create a file in that volume path via ssh.
 - Create a persistent volume claim that bind to persistent volume as developer
 - Create a pod that use the volume claim `spec.persistentVolumeClaim[*].name`

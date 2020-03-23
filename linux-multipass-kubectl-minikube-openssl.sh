@@ -110,3 +110,35 @@ openssl req -in nginx.key -out nginx.crt -subj "/CN=my-nginx/O=my-nginx"
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout nginx.key -out nginx.crt -subj "/CN=my-nginx/O=my-nginx"
 crt=$(cat nginx.crt | base64)
 key=$(cat nginx.key | base64)
+
+ETCDCTL_API=3 etcdctl snapshot # view arguments list
+
+ETCDCTL_API=3 etcdctl snapshot save /tmp/snapshot-pre-boot.db \
+--endpoints=127.0.0.1:2379 \
+--cacert=/etc/kubernetes/pki/etcd/ca.crt \
+--cert=/etc/kubernetes/pki/etcd/server.crt \
+--key=/etc/kubernetes/pki/etcd/server.key \
+
+ETCDCTL_API=3 etcdctl member list \
+--endpoints=127.0.0.1:2379 \
+--cacert=/etc/kubernetes/pki/etcd/ca.crt \
+--cert=/etc/kubernetes/pki/etcd/server.crt \
+--key=/etc/kubernetes/pki/etcd/server.key \
+
+ETCDCTL_API=3 etcdctl \
+snapshot status /tmp/snapshot-pre-boot.db
+
+ETCDCTL_API=3 etcdctl snapshot restore /tmp/snapshot-pre-boot.db \
+--endpoints=127.0.0.1:2379 \
+--cacert=/etc/kubernetes/pki/etcd/ca.crt \
+--cert=/etc/kubernetes/pki/etcd/server.crt \
+--key=/etc/kubernetes/pki/etcd/server.key \
+--name=master \
+--data-dir /var/lib/etcd-from-backup \
+--initial-cluster-token=etcd-cluster-1 \
+--initial-cluster=master=https://172.17.0.9:2380 \
+--initial-advertise-peer-urls=https://172.17.0.9:2380
+
+kubectl create clusterrole developer --verb=create,list,get,update,delete --resource=pods -n development
+kubectl create clusterrolebinding cluster-developer --clusterrole=developer --user=john -n development
+kubectl run testpod -it --rm --restart=Never --generator=run-pod/v1 --image=busybox:1.28 -- nslookup nginx-resolver-service > /root/nginx.svc

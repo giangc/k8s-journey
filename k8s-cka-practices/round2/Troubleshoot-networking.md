@@ -6,8 +6,9 @@
  
 # Mental model
 1. How does DNS helps pod client to discover active services within cluster?
-    - namespace same: `workspace1`, pod `work-pod1` can discover `work-service1`
+    - namespace same: `work-space1`, pod `work-pod1` can discover `work-service1`
     - namespace different: `commonspace1`, pod `common-pod1` can discover service within `workspace1`, via `common-pod1.workspace1`
+    - nslookup 10-4-5-0.default.pod
 
 2. 
 

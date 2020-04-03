@@ -1,0 +1,2 @@
+ReplicaSet "backend-deployment-747dd8744" has successfully progressed. Deployment has minimum availability.
+Progressing Availablekdeploy -o jsonpath='{.items[*].status.conditions[*].message}{'\n'}{.items[*].status.conditions[*].type}'
